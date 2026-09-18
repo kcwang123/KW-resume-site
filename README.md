@@ -25,3 +25,5 @@ npm run dev
 ## GitHub Pages
 
 Deploys from `main` with `.github/workflows/deploy-pages.yml`.
+
+Deployment trigger: enabled.
