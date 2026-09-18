@@ -4,22 +4,163 @@
     "title": "Senior Backend / Systems Engineer",
     "location": "Taiwan",
     "remote": true,
-    "summary": "Backend engineer with 13+ years of experience building and operating production systems across integrations, messaging, data pipelines, and AI-assisted engineering workflows.",
-    "tagline": "Build reliable systems that make an impact.",
+    "summary": "Backend and systems engineer with 13+ years of experience building production software across messaging, integrations, data-heavy workflows, cloud operations, and AI-assisted delivery.",
+    "tagline": "I build backend systems that stay boring in production.",
     "availability": "Open to remote Senior Backend / Systems roles"
   },
   "links": {
     "email": "",
     "linkedin": "",
-    "github": "",
+    "github": "https://github.com/kcwang123",
     "resumePdf": "",
     "portfolio": "/portfolio"
   },
   "metrics": [
-    {"value": "13+", "label": "Years of experience"},
-    {"value": "1M+", "label": "Push notifications / day"},
-    {"value": "50K+", "label": "SMS deliveries / day"},
-    {"value": "5", "label": "SMS provider integrations"},
-    {"value": "7–10", "label": "Upstream system integrations"}
+    {
+      "value": "13+",
+      "label": "Years building production systems"
+    },
+    {
+      "value": "1M+",
+      "label": "Push notifications / day"
+    },
+    {
+      "value": "50K+",
+      "label": "SMS deliveries / day"
+    },
+    {
+      "value": "5",
+      "label": "SMS provider integrations"
+    },
+    {
+      "value": "7–10",
+      "label": "Upstream integrations"
+    }
+  ],
+  "focus": [
+    "Backend systems",
+    "Integration & messaging",
+    "SQL & data workflows",
+    "Production reliability",
+    "AI-assisted engineering"
+  ],
+  "experience": [
+    {
+      "period": "2020 — Present",
+      "company": "Quande Information Technology",
+      "role": "Blockchain Systems Development Engineer",
+      "location": "Remote",
+      "summary": "Own and evolve production backend systems spanning integrations, messaging, operational tooling, and reliability.",
+      "highlights": [
+        "Operate a notification platform delivering 1M+ push notifications and 50K+ SMS messages per day.",
+        "Integrated five SMS providers with configurable routing, retry, failure handling, and delivery-state tracking.",
+        "Maintain C#/.NET and SQL Server services on Azure and IIS, with production monitoring through Application Insights.",
+        "Improved user-facing performance with caching and AJAX lazy loading while guarding against race conditions with server-side revalidation."
+      ],
+      "stack": [
+        "C#",
+        ".NET",
+        "SQL Server",
+        "Azure",
+        "Dapper",
+        "IIS",
+        "Application Insights"
+      ]
+    },
+    {
+      "period": "Previous role · ~5 years",
+      "company": "Education Budget & Accounting Platform",
+      "role": "Software Engineer",
+      "location": "Taiwan",
+      "summary": "Built and maintained a multi-school budgeting and accounting system with reporting, cross-school queries, and complex business rules.",
+      "highlights": [
+        "Worked on .NET 4.8 / SQL Server production systems deployed across multiple servers.",
+        "Optimized indexing, large queries, and overnight reporting workloads.",
+        "Implemented priority-based and EAV-style business logic for evolving budgeting requirements.",
+        "Supported procurement, acceptance, and finance workflows used across schools."
+      ],
+      "stack": [
+        ".NET 4.8",
+        "SQL Server",
+        "IIS",
+        "Reporting",
+        "Query Optimization"
+      ]
+    },
+    {
+      "period": "Earlier career",
+      "company": "Duty-free Retail ETL & Incentive System",
+      "role": "Software Engineer",
+      "location": "Taiwan",
+      "summary": "Worked on retail data integration and incentive-calculation pipelines.",
+      "highlights": [
+        "Built Oracle-to-SQL Server ETL flows with SSIS.",
+        "Processed high-volume monthly store data and multi-level bonus calculations.",
+        "Implemented stored-procedure-driven transformation and calculation workflows."
+      ],
+      "stack": [
+        "Oracle",
+        "SQL Server",
+        "SSIS",
+        "Stored Procedures",
+        "ETL"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend",
+      "items": [
+        "C#",
+        ".NET / ASP.NET",
+        "Web APIs",
+        "Dapper",
+        "SSE",
+        "Background processing"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "SQL Server",
+        "Oracle",
+        "Query optimization",
+        "ETL / SSIS",
+        "Data modeling",
+        "Reporting"
+      ]
+    },
+    {
+      "group": "Cloud & Ops",
+      "items": [
+        "Azure App Service",
+        "Azure Blob Storage",
+        "Azure SQL",
+        "Application Insights",
+        "IIS",
+        "Production monitoring"
+      ]
+    },
+    {
+      "group": "Integration",
+      "items": [
+        "SMS providers",
+        "Push notifications",
+        "Third-party APIs",
+        "Retry & routing",
+        "Delivery tracking",
+        "System integration"
+      ]
+    },
+    {
+      "group": "AI-assisted Delivery",
+      "items": [
+        "Grill → spec → tickets",
+        "AI-assisted coding",
+        "Scoped implementation",
+        "Code review",
+        "Verification workflows"
+      ]
+    }
   ]
 }
