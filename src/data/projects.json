@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "patchgrid",
+    "name": "PatchGrid",
+    "subtitle": "Production Monitoring & Delivery Platform",
+    "summary": "Placeholder until the resume/project grill is completed.",
+    "image": "/images/projects/patchgrid.webp",
+    "tags": ["Production", "Monitoring", "Reliability"],
+    "caseStudy": "/projects/patchgrid",
+    "status": "production",
+    "evidence": [],
+    "assets": []
+  },
+  {
+    "slug": "msar",
+    "name": "MSAR / ITRI",
+    "subtitle": "AI-assisted Search & Rescue Workflow",
+    "summary": "Placeholder until the resume/project grill is completed.",
+    "image": "/images/projects/msar.webp",
+    "tags": ["AI", "GIS", "Workflow"],
+    "caseStudy": "/projects/msar",
+    "status": "production",
+    "evidence": [],
+    "assets": []
+  },
+  {
+    "slug": "messaging-platform",
+    "name": "Messaging Platform",
+    "subtitle": "Multi-provider Notification System",
+    "summary": "Placeholder until the resume/project grill is completed.",
+    "image": "/images/projects/messaging.webp",
+    "tags": ["SMS", "Push", "Integration"],
+    "caseStudy": "/projects/messaging-platform",
+    "status": "production",
+    "evidence": [],
+    "assets": []
+  }
+]
