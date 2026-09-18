@@ -1,0 +1,46 @@
+---
+import resume from '../data/resume.json';
+import projects from '../data/projects.json';
+import '../styles/global.css';
+import '../styles/visual.css';
+
+const base = import.meta.env.BASE_URL;
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content={resume.profile.summary} />
+  <title>{resume.profile.name} — {resume.profile.title}</title>
+</head>
+<body class="visual-theme">
+<main class="shell">
+  <header class="hero">
+    <p class="eyebrow">{resume.profile.title}</p>
+    <h1>{resume.profile.name}</h1>
+    <p class="lead">{resume.profile.summary}</p>
+    <nav class="actions" aria-label="Primary">
+      <a href="#experience">Experience</a>
+      <a href={`${base}portfolio/`}>View Portfolio</a>
+      <a href={`${base}console/`}>Developer Console</a>
+    </nav>
+  </header>
+
+  <section class="metrics" aria-label="Career metrics">
+    {resume.metrics.map((m) => <article><strong>{m.value}</strong><span>{m.label}</span></article>)}
+  </section>
+
+  <section id="experience">
+    <div class="section-head"><h2>Experience</h2><p>Resume-first. Portfolio-second.</p></div>
+    <div class="placeholder">Experience content will be filled after the resume grill.</div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Selected Projects</h2><a href={`${base}portfolio/`}>View portfolio →</a></div>
+    <div class="project-grid">
+      {projects.map((p) => <article class="project-card"><div class="project-thumb"></div><h3>{p.name}</h3><p>{p.subtitle}</p><a href={`${base}${p.caseStudy.replace(/^\//, '')}/`}>View case study →</a></article>)}
+    </div>
+  </section>
+</main>
+</body>
+</html>
