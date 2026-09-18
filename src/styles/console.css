@@ -1,0 +1,5 @@
+.console-theme{background:#09110f;color:#dce8e2;font-family:"IBM Plex Mono",ui-monospace,monospace}.terminal-shell{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:34px 0 90px}
+.console-theme h1{color:#f6fbf8}.console-theme h2{color:#59e0aa;font-size:1rem;font-weight:500}.console-theme section{border-top:1px solid #234139;padding:28px 0}
+.console-metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.console-metrics div,.console-project{border:1px solid #234139;padding:14px}
+.console-metrics strong{display:block;color:#59e0aa;font-size:1.5rem}.console-metrics span{color:#91aaa0;font-size:.78rem}.console-project{display:grid;grid-template-columns:1fr 2fr auto;gap:16px;margin-bottom:10px}
+.console-project a{color:#59e0aa}.muted{color:#91aaa0}@media(max-width:760px){.console-metrics{grid-template-columns:1fr 1fr}.console-project{grid-template-columns:1fr}}
