@@ -1,0 +1,1 @@
+.visual-theme .hero h1::after{content:' — resume';color:var(--accent);font-size:.35em;font-weight:500}
