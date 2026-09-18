@@ -1,0 +1,41 @@
+---
+import resume from '../data/resume.json';
+import projects from '../data/projects.json';
+import '../styles/global.css';
+import '../styles/console.css';
+
+const base = import.meta.env.BASE_URL;
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content={resume.profile.summary} />
+  <title>{resume.profile.name} — Console Resume</title>
+</head>
+<body class="console-theme">
+<main class="terminal-shell">
+  <header>
+    <p>&gt; whoami</p>
+    <h1>{resume.profile.name}_</h1>
+    <p>{resume.profile.title}</p>
+    <p>location: {resume.profile.location} / remote</p>
+    <p><a href={base}>← visual_resume</a></p>
+  </header>
+
+  <section>
+    <h2>&gt; metrics --summary</h2>
+    <div class="console-metrics">
+      {resume.metrics.map((m) => <div><strong>{m.value}</strong><span>{m.label}</span></div>)}
+    </div>
+  </section>
+
+  <section><h2>&gt; experience --timeline</h2><p class="muted">Experience content will be filled after the resume grill.</p></section>
+
+  <section>
+    <h2>&gt; selected_projects --list</h2>
+    {projects.map((p) => <article class="console-project"><strong>{p.name}</strong><span>{p.subtitle}</span><a href={`${base}${p.caseStudy.replace(/^\//, '')}/`}>open →</a></article>)}
+  </section>
+</main>
+</body>
+</html>
