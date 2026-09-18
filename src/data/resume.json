@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "name": "Kevin Wang",
+    "title": "Senior Backend / Systems Engineer",
+    "location": "Taiwan",
+    "remote": true,
+    "summary": "Backend engineer with 13+ years of experience building and operating production systems across integrations, messaging, data pipelines, and AI-assisted engineering workflows.",
+    "tagline": "Build reliable systems that make an impact.",
+    "availability": "Open to remote Senior Backend / Systems roles"
+  },
+  "links": {
+    "email": "",
+    "linkedin": "",
+    "github": "",
+    "resumePdf": "",
+    "portfolio": "/portfolio"
+  },
+  "metrics": [
+    {"value": "13+", "label": "Years of experience"},
+    {"value": "1M+", "label": "Push notifications / day"},
+    {"value": "50K+", "label": "SMS deliveries / day"},
+    {"value": "5", "label": "SMS provider integrations"},
+    {"value": "7–10", "label": "Upstream system integrations"}
+  ]
+}
