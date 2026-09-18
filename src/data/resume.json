@@ -27,14 +27,6 @@
     {
       "value": "50K+",
       "label": "SMS deliveries / day"
-    },
-    {
-      "value": "5",
-      "label": "SMS provider integrations"
-    },
-    {
-      "value": "7–10",
-      "label": "Upstream integrations"
     }
   ],
   "focus": [
