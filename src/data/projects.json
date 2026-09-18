@@ -3,36 +3,39 @@
     "slug": "patchgrid",
     "name": "PatchGrid",
     "subtitle": "Production Monitoring & Delivery Platform",
-    "summary": "Placeholder until the resume/project grill is completed.",
-    "image": "/images/projects/patchgrid.webp",
-    "tags": ["Production", "Monitoring", "Reliability"],
+    "summary": "A production system for scheduled and real-time monitoring, operational visibility, and delivery tracking. Used as an ongoing modernization project and portfolio case study.",
+    "tags": [
+      "Production",
+      "Monitoring",
+      "Reliability"
+    ],
     "caseStudy": "/projects/patchgrid",
-    "status": "production",
-    "evidence": [],
-    "assets": []
+    "status": "Live system"
   },
   {
     "slug": "msar",
     "name": "MSAR / ITRI",
-    "subtitle": "AI-assisted Search & Rescue Workflow",
-    "summary": "Placeholder until the resume/project grill is completed.",
-    "image": "/images/projects/msar.webp",
-    "tags": ["AI", "GIS", "Workflow"],
+    "subtitle": "AI + GIS Search & Rescue Workflow",
+    "summary": "A modular search-and-rescue workflow coordinating GIS inputs, AI inference, expert rules, route analysis, post-processing, and delivery outputs under real project constraints.",
+    "tags": [
+      "AI",
+      "GIS",
+      "Workflow orchestration"
+    ],
     "caseStudy": "/projects/msar",
-    "status": "production",
-    "evidence": [],
-    "assets": []
+    "status": "Delivery project"
   },
   {
     "slug": "messaging-platform",
     "name": "Messaging Platform",
-    "subtitle": "Multi-provider Notification System",
-    "summary": "Placeholder until the resume/project grill is completed.",
-    "image": "/images/projects/messaging.webp",
-    "tags": ["SMS", "Push", "Integration"],
+    "subtitle": "Multi-provider Notification Delivery",
+    "summary": "High-volume push and SMS delivery with multiple providers, configurable routing, retry behavior, delivery states, and operational monitoring.",
+    "tags": [
+      "SMS",
+      "Push",
+      "Integration"
+    ],
     "caseStudy": "/projects/messaging-platform",
-    "status": "production",
-    "evidence": [],
-    "assets": []
+    "status": "Production"
   }
 ]
