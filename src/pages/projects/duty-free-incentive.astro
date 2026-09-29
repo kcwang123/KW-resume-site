@@ -4,9 +4,10 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Duty-free Incentive Platform — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">PROFESSIONAL · DATA INTEGRATION</p>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">PROFESSIONAL · DATA INTEGRATION</p>
 <h1>Duty-free Incentive Platform</h1>
 <p class="lead">A recoverable Oracle-to-SQL Server ETL and incentive-calculation workflow for roughly 6–7 high-volume retail stores.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>ETL designer · backend co-design</dd></div><div><dt>Status</dt><dd>Production delivery</dd></div><div><dt>Scope</dt><dd>~6–7 retail stores</dd></div><div><dt>Stack</dt><dd>Oracle · SQL Server · SSIS</dd></div></dl>
 <section><h2>My Role</h2><p>I designed the ETL pipeline and co-designed the backend calculation model with my manager.</p></section>
 <section><h2>Data Reality</h2><p>Long-running transfers and source data could produce incomplete records, encoding problems, invalid characters, failed rows, and orphan data. The workflow explicitly classified successful, failed, and orphan records instead of assuming every batch was clean.</p></section>
 <section><h2>Recovery</h2><p>Operators could identify which data required another attempt and selectively replay it, while retaining the option to rerun a full set when appropriate. Recovery was part of the workflow rather than an ad-hoc manual repair step.</p></section>
