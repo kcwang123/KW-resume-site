@@ -4,9 +4,10 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Residential BMS Portal — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">CLIENT DELIVERY · LEGACY TAKEOVER</p>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">CLIENT DELIVERY · LEGACY TAKEOVER</p>
 <h1>Residential BMS Portal</h1>
 <p class="lead">Extending an existing ASP.NET Framework portal used to manage and analyze a large residential common-area building-management system.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Inherited application owner</dd></div><div><dt>Status</dt><dd>In use</dd></div><div><dt>Data</dt><dd>Hourly aggregated BMS values</dd></div><div><dt>Stack</dt><dd>ASP.NET Framework · SQL</dd></div></dl>
 <section><h2>Context</h2><p>The BMS vendor already collects field data over Modbus TCP and writes aggregated values into a database. The original application developer was no longer available, so I took over the existing portal codebase rather than replacing the system.</p></section>
 <section><h2>Application Work</h2><p>I build on top of the vendor-collected database data to add electricity-cost estimation and selected equipment-point trend analysis in chart and table form.</p></section>
 <section><h2>Historical Data</h2><p>The application currently works mainly with hourly aggregated values rather than claiming ownership of raw telemetry ingestion. Supporting data-cleaning and aggregation work handles the historical-data lifecycle needed by reporting.</p></section>
