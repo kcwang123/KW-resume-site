@@ -1,0 +1,19 @@
+---
+import '../../styles/global.css';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="EcclesiaNexus hybrid cloud and edge church operations platform case study." /><title>EcclesiaNexus — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a>
+<p class="eyebrow">OWNED PRODUCT · ACTIVE DEVELOPMENT</p>
+<h1>EcclesiaNexus</h1>
+<p class="lead">A greenfield church operations platform designed around explicit module boundaries, multi-tenant ownership, cloud/edge operation, and real on-site workflows.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Architecture & product owner</dd></div><div><dt>Status</dt><dd>Active development</dd></div><div><dt>Architecture</dt><dd>Cloud core + edge agent</dd></div><div><dt>Stack</dt><dd>Go · React · PostgreSQL · SQLite</dd></div></dl>
+<section><h2>Implemented Today</h2><p>The repository is well beyond an architecture sketch. It contains a Go cloud API, PostgreSQL persistence, a Go edge agent with SQLite caching, React 19 web applications, Docker-based deployment, CI workflows, and implemented domain modules including WAMS, roster/scheduling, People, Check-Ins, and Groups. Notification infrastructure and operational/admin capabilities are also present.</p></section>
+<section><h2>Cloud / Edge Boundary</h2><p>The cloud server owns authoritative multi-tenant data. The edge agent provides a local execution and cache boundary for church-site workflows where local availability matters. Cloud-to-edge synchronization is deliberately modeled as a boundary rather than sharing a database between deployment contexts.</p></section>
+<section><h2>Domain Boundaries</h2><p>The system separates global users, workspaces, workspace membership, and domain people identities instead of collapsing them into one table. Cross-module identity decisions are documented and implemented through explicit bridges, with workspace isolation enforced in data access and authentication paths.</p></section>
+<section><h2>Verification</h2><p>The project includes automated Go tests, frontend type/build checks, CI, integration QA, and gated real-PostgreSQL end-to-end verification. The Groups flow, for example, verifies cross-module person linkage, capacity and leader rules, attendance idempotency, directory scope, and module gating against a real database.</p></section>
+<section><h2>Still In Progress</h2><p>This remains an active product, not a finished commercial system. Additional church-management and commercial capabilities are tracked separately from implemented modules. I keep that distinction explicit so roadmap intent is not presented as shipped functionality.</p></section>
+<section><h2>AI-assisted Engineering</h2><p>I own problem framing, architecture, boundaries, contracts, decomposition, review, and acceptance. AI agents accelerate detailed design, implementation, testing, and documentation within those constraints.</p></section>
+<section><h2>What this demonstrates</h2><p>Greenfield backend architecture, multi-tenant domain modeling, cloud/edge integration, explicit module ownership, automated verification, and the ability to use AI as an engineering force multiplier without outsourcing architectural responsibility.</p></section>
+</main></body></html>
