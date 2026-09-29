@@ -28,7 +28,7 @@ a{color:inherit;text-underline-offset:.2em}
 .tags{display:flex;gap:7px;flex-wrap:wrap}
 .tags span{border:1px solid var(--border);border-radius:999px;padding:5px 9px;color:var(--muted);font:500 .72rem/1 "IBM Plex Mono",monospace}
 footer{border-top:1px solid var(--border);padding:24px 0 40px;display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}
-.case-study{max-width:760px;padding:64px 0 100px}
+.case-study{max-width:900px;padding:64px 0 100px}\n.case-back{display:inline-block;margin-bottom:42px;color:var(--muted);font:500 .78rem/1 "IBM Plex Mono",monospace;text-decoration:none}\n.case-study .lead{font-size:1.12rem;max-width:760px}\n.case-facts{display:grid;grid-template-columns:repeat(4,1fr);margin:36px 0 48px;border-block:1px solid var(--border)}\n.case-facts div{padding:18px 18px 18px 0;border-right:1px solid var(--border)}\n.case-facts div+div{padding-left:18px}.case-facts div:last-child{border-right:0}\n.case-facts dt{color:var(--muted);font:600 .66rem/1 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.07em}\n.case-facts dd{margin:8px 0 0;font-size:.88rem;line-height:1.45}\n.case-study section{max-width:760px}
 .case-study h1{font-size:clamp(2.8rem,7vw,5.5rem);letter-spacing:-.055em;line-height:.95}
 .case-study section{border-top:1px solid var(--border);padding:34px 0}
 .case-study p{color:var(--muted);line-height:1.75}
@@ -37,6 +37,6 @@ footer{border-top:1px solid var(--border);padding:24px 0 40px;display:flex;justi
   .topbar{height:64px}
   .topbar nav{gap:13px}
   .topbar nav a:nth-child(2){display:none}
-  footer{display:block}
+  .case-facts{grid-template-columns:1fr 1fr}\n  .case-facts div:nth-child(2){border-right:0}\n  .case-facts div:nth-child(n+3){border-top:1px solid var(--border)}\n  footer{display:block}
   footer span{display:block;margin-top:6px}
 }
