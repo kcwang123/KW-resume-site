@@ -4,9 +4,10 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Customer Operations Platform — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">PROFESSIONAL · PRODUCTION TAKEOVER</p>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">PROFESSIONAL · PRODUCTION TAKEOVER</p>
 <h1>Customer Operations Platform</h1>
 <p class="lead">An existing operations platform I took over and now own across application behavior, data, deployment, and production troubleshooting.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Application & production owner</dd></div><div><dt>Status</dt><dd>Production</dd></div><div><dt>Scope</dt><dd>12-tab operations workflow</dd></div><div><dt>Stack</dt><dd>C# · SQL Server · Azure</dd></div></dl>
 <section><h2>Problem</h2><p>A user-detail screen contained 12 tabs but loaded all tab data before the operator could work. Initial loading was slow, interaction felt blocked, and refreshing one area meant paying the cost of the whole page again.</p></section>
 <section><h2>Change</h2><p>I moved the page toward independent tab loading with AJAX and caching so operators can start working without waiting for unrelated data. Individual tabs can be refreshed independently, which also makes the operational workflow simpler.</p></section>
 <section><h2>State Safety</h2><p>For operations that change downstream state, the application does not rely only on stale UI state. It reloads and validates the state before sending the operation, while the downstream API performs its own state validation as a second boundary.</p></section>
