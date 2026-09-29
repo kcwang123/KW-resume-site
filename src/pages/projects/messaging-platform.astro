@@ -1,25 +1,16 @@
 ---
 import '../../styles/global.css';
-const title = 'Messaging Platform';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 ---
-<html lang="en">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>{title} — Case Study</title></head>
-<body>
-<main class="shell case-study">
-<a href={`${base}portfolio/`}>← Portfolio</a>
-<h1>{title}</h1>
-<p class="lead">Placeholder until project grill is completed.</p>
-<section><h2>Context</h2><p>TBD</p></section>
-<section><h2>Problem</h2><p>TBD</p></section>
-<section><h2>Constraints</h2><p>TBD</p></section>
-<section><h2>Architecture</h2><p>TBD</p></section>
-<section><h2>Key Decisions</h2><p>TBD</p></section>
-<section><h2>Reliability & Operations</h2><p>TBD</p></section>
-<section><h2>Scale / Metrics</h2><p>TBD</p></section>
-<section><h2>Trade-offs</h2><p>TBD</p></section>
-<section><h2>Outcome</h2><p>TBD</p></section>
-<section><h2>What I'd Improve Today</h2><p>TBD</p></section>
-</main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="High-volume multi-provider messaging platform case study." /><title>Messaging Platform — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a href={`${base}portfolio/`}>← Selected work</a>
+<p class="eyebrow">PROFESSIONAL · PRODUCTION</p>
+<h1>Messaging Platform</h1>
+<p class="lead">A production notification system delivering more than 1M push notifications and 50K SMS messages per day across multiple external providers.</p>
+<section><h2>Context</h2><p>The platform is part of an existing production environment I own and evolve. Notification delivery has to work across provider boundaries while remaining observable enough to troubleshoot real delivery failures.</p></section>
+<section><h2>Scale & Integration</h2><p>The system handles 1M+ push notifications and 50K+ SMS messages per day. SMS delivery integrates five providers behind application-level service boundaries, with configurable routing, result logging, delivery states, and retry behavior.</p></section>
+<section><h2>Reliability</h2><p>External delivery is not treated as a single successful API call. Provider results are persisted and failed work can be retried. Operational troubleshooting focuses on the state transition from scheduled work through provider execution and recorded result.</p></section>
+<section><h2>Trade-offs</h2><p>The current system evolved inside a long-running production codebase rather than from a greenfield queue architecture. I prefer to describe the actual guarantees and failure paths rather than imply stronger delivery semantics than the implementation provides.</p></section>
+<section><h2>What this demonstrates</h2><p>High-volume production ownership, third-party provider integration, failure handling, state tracking, and the ability to evolve an existing system without rewriting it for résumé value.</p></section>
+</main></body></html>
