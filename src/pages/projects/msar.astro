@@ -4,10 +4,11 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="MSAR V2 computation orchestration and integration case study." /><title>MSAR V2 / ITRI — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a>
 <p class="eyebrow">CLIENT DELIVERY · INTEGRATION</p>
 <h1>MSAR V2 / ITRI</h1>
 <p class="lead">An integration and computation-orchestration layer coordinating frontend requests, database APIs, independently developed computation modules, result artifacts, and persistence.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Architecture & integration owner</dd></div><div><dt>Status</dt><dd>Delivered / V2 evolution</dd></div><div><dt>Scope</dt><dd>DB API + computation layer</dd></div><div><dt>Stack</dt><dd>Python · APIs · isolated runtimes</dd></div></dl>
 <section><h2>Context</h2><p>V1 had already been delivered. V2 required architectural changes and new integrations while multiple teams continued to own and update their own computation code.</p></section>
 <section><h2>My Boundary</h2><p>I own the computation application and DB API layer: frontend request → DB API → computation service → data acquisition → decide which computations run, skip, or combine → execute → generate results and layers → return through the DB API for persistence.</p></section>
 <section><h2>Cross-team Contracts</h2><p>The work requires coordinating interfaces on both sides: request parameters and persistence with the application/database side, and execution inputs plus output layer artifacts with computation teams.</p></section>
