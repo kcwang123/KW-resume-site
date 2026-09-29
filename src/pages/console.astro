@@ -4,7 +4,7 @@ import projects from '../data/projects.json';
 import '../styles/global.css';
 import '../styles/console.css';
 
-const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';\nconst featuredProjects = projects.filter((project) => project.featured);
 ---
 <html lang="en">
 <head>
@@ -40,7 +40,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
         <article>
           <div class="timeline-date">{job.period}</div>
           <div>
-            <h2>{job.role}</h2>
+            <h2>{job.role}</h2>\n            {job.officialTitle && <p class="official-title">official_title: {job.officialTitle}</p>}
             <h3>{job.company}</h3>
             <p>{job.summary}</p>
             <ul>{job.highlights.map((item) => <li>{item}</li>)}</ul>
@@ -66,9 +66,9 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
   <section class="command-block">
     <p class="prompt">kevin@resume:~$ <span>projects --featured</span></p>
     <div class="console-projects">
-      {projects.map((p) => (
+      {featuredProjects.map((p) => (
         <article>
-          <div><small>[{p.status}]</small><h2>{p.name}</h2><p>{p.subtitle}</p><p class="muted">{p.summary}</p></div>
+          <div><small>[{p.category} · {p.status}]</small><h2>{p.name}</h2><p>{p.subtitle}</p><p class="muted">{p.summary}</p></div>
           <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>./open_case_study →</a>
         </article>
       ))}
