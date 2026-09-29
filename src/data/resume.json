@@ -19,8 +19,7 @@
     {"value": "13+", "label": "Years building production systems"},
     {"value": "1M+", "label": "Push notifications / day"},
     {"value": "50K+", "label": "SMS deliveries / day"},
-    {"value": "5", "label": "SMS provider integrations"},
-    {"value": "Dozens", "label": "PatchGrid users"}
+    {"value": "5", "label": "SMS provider integrations"}
   ],
   "focus": [
     "Backend & production systems",
@@ -33,12 +32,13 @@
     {
       "period": "2020 — Present",
       "company": "Quande Information Technology",
-      "role": "Blockchain Systems Development Engineer",
+      "role": "Senior Backend / Systems Engineer",
+      "officialTitle": "Blockchain Systems Development Engineer",
       "location": "Remote",
       "summary": "Own and evolve existing production systems spanning customer operations, messaging, integrations, data, deployment, and reliability.",
       "highlights": [
         "Operate a notification platform delivering 1M+ push notifications and 50K+ SMS messages per day across five SMS providers.",
-        "Own a customer-operations platform deployed to Azure Web App with VM and SQL-backed services; improved a 12-tab user view from blocking full-page loading to independently loaded and refreshable tabs.",
+        "Own a customer-operations platform deployed to Azure Web App; changed a blocking 12-tab user view into independently loaded and refreshable tabs.",
         "Use application-side revalidation plus downstream state checks for operations that mutate external system state.",
         "Maintain C#/.NET and SQL Server services across Azure and IIS, with production monitoring through Application Insights."
       ],
@@ -53,8 +53,7 @@
       "highlights": [
         "Evolved .NET Framework / SQL Server production workflows while preserving compatibility with older fiscal-year data.",
         "Introduced new fields incrementally rather than forcing incompatible schema assumptions onto historical records.",
-        "Supported decision-period aggregation by moving shared summary work to overnight processing when many schools needed the same calculations in a short window.",
-        "Owned production maintenance, reporting, SQL troubleshooting, and ongoing business-rule changes."
+        "Moved shared summary work to overnight processing when many schools needed the same calculations in a short decision window."
       ],
       "stack": [".NET Framework", "SQL Server", "IIS", "Reporting", "Legacy evolution"]
     },
@@ -65,10 +64,9 @@
       "location": "Taiwan",
       "summary": "Designed the ETL pipeline and co-designed the backend calculation model for a multi-store incentive-calculation system.",
       "highlights": [
-        "Designed Oracle-to-SQL Server ETL flows for data from roughly 6–7 high-volume retail stores.",
+        "Designed Oracle-to-SQL Server ETL flows for roughly 6–7 high-volume retail stores.",
         "Handled incomplete records, encoding problems, invalid characters, failed records, and orphan data with explicit classification and replay paths.",
-        "Implemented complex incentive rules varying by store, product category, team, and specific products.",
-        "Replaced extensive manual report cross-referencing with system calculation so HR could focus on validation."
+        "Automated complex incentive calculations so HR could focus on validating results instead of manually cross-referencing reports."
       ],
       "stack": ["Oracle", "SQL Server", "SSIS", "Stored Procedures", "ETL"]
     }
