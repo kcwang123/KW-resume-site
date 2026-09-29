@@ -5,6 +5,7 @@ import '../styles/global.css';
 import '../styles/visual.css';
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const featuredProjects = projects.filter((project) => project.featured);
 ---
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     <nav>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href={base + 'portfolio/'}>Portfolio</a>
+      <a href={base + 'portfolio/'}>Work</a>
       <a href={base + 'console/'}>Console</a>
     </nav>
   </header>
@@ -27,7 +28,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
   <main class="shell">
     <section class="resume-hero">
       <div class="hero-copy">
-        <p class="eyebrow">SENIOR BACKEND / SYSTEMS ENGINEER</p>
+        <p class="eyebrow">SENIOR BACKEND / SYSTEMS / INTEGRATION ENGINEER</p>
         <h1>{resume.profile.name}</h1>
         <h2>{resume.profile.tagline}</h2>
         <p class="lead">{resume.profile.summary}</p>
@@ -41,7 +42,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
       <aside class="hero-note">
         <p>Current focus</p>
         <ul>{resume.focus.map((item) => <li>{item}</li>)}</ul>
-        <small>Public resume draft — deeper project stories are being expanded separately.</small>
+        <small>Production ownership, integration boundaries, reliability, and maintainable delivery — with AI used as an implementation accelerator rather than an architecture substitute.</small>
       </aside>
     </section>
 
@@ -52,10 +53,10 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     </section>
 
     <section id="experience" class="resume-section">
-      <div class="section-kicker">01 / EXPERIENCE</div>
+      <div class="section-kicker">01 / PROFESSIONAL EXPERIENCE</div>
       <div class="section-title">
         <h2>Production systems, not demo apps.</h2>
-        <p>A concise public view of the work. Project pages go deeper into constraints, architecture, and trade-offs.</p>
+        <p>Most of my work starts with an existing system, real users, legacy constraints, and a boundary that needs to become reliable.</p>
       </div>
       <div class="experience-list">
         {resume.experience.map((job, index) => (
@@ -86,19 +87,22 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 
     <section class="resume-section">
       <div class="section-kicker">03 / SELECTED WORK</div>
-      <div class="section-title"><h2>Three systems worth opening.</h2><a href={base + 'portfolio/'}>All case studies →</a></div>
+      <div class="section-title">
+        <h2>Three systems that show the pattern.</h2>
+        <a href={base + 'portfolio/'}>Professional, client & independent work →</a>
+      </div>
       <div class="selected-work">
-        {projects.map((p, index) => (
+        {featuredProjects.map((p, index) => (
           <article>
             <div class="work-number">0{index + 1}</div>
             <div>
-              <small>{p.status}</small>
+              <small>{p.category} · {p.status}</small>
               <h3>{p.name}</h3>
               <p class="work-subtitle">{p.subtitle}</p>
               <p>{p.summary}</p>
               <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
             </div>
-            <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Open →</a>
+            {p.caseStudy && <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Open →</a>}
           </article>
         ))}
       </div>
@@ -107,11 +111,11 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     <section class="closing">
       <p class="eyebrow">REMOTE · TAIWAN</p>
       <h2>Backend, integration, production ownership.</h2>
-      <p>This site is intentionally resume-first. The portfolio is where the systems get unpacked.</p>
-      <div class="actions"><a class="primary" href={base + 'portfolio/'}>View portfolio</a><a href={base + 'console/'}>Open developer console</a></div>
+      <p>I work best where software has to cross boundaries: legacy applications, databases, external providers, computation modules, devices, and the people operating them.</p>
+      <div class="actions"><a class="primary" href={base + 'portfolio/'}>View selected work</a><a href={base + 'console/'}>Open developer console</a></div>
     </section>
   </main>
 
-  <footer class="shell"><span>Kevin Wang · {new Date().getFullYear()}</span><span>Built as a versioned resume, not a static PDF.</span></footer>
+  <footer class="shell"><span>Kevin Wang · {new Date().getFullYear()}</span><span>Senior Backend / Systems / Integration Engineer</span></footer>
 </body>
 </html>
