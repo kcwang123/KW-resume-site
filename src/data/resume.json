@@ -1,12 +1,12 @@
 {
   "profile": {
     "name": "Kevin Wang",
-    "title": "Senior Backend / Systems Engineer",
+    "title": "Senior Backend / Systems / Integration Engineer",
     "location": "Taiwan",
     "remote": true,
-    "summary": "Backend and systems engineer with 13+ years of experience building production software across messaging, integrations, data-heavy workflows, cloud operations, and AI-assisted delivery.",
-    "tagline": "I build backend systems that stay boring in production.",
-    "availability": "Open to remote Senior Backend / Systems roles"
+    "summary": "Backend, systems, and integration engineer with 13+ years of experience taking over real production systems, defining boundaries between services and vendors, and turning messy workflows into reliable software.",
+    "tagline": "I turn fragmented systems into reliable production workflows.",
+    "availability": "Open to remote Senior Backend / Systems / Integration roles"
   },
   "links": {
     "email": "",
@@ -16,24 +16,17 @@
     "portfolio": "/portfolio"
   },
   "metrics": [
-    {
-      "value": "13+",
-      "label": "Years building production systems"
-    },
-    {
-      "value": "1M+",
-      "label": "Push notifications / day"
-    },
-    {
-      "value": "50K+",
-      "label": "SMS deliveries / day"
-    }
+    {"value": "13+", "label": "Years building production systems"},
+    {"value": "1M+", "label": "Push notifications / day"},
+    {"value": "50K+", "label": "SMS deliveries / day"},
+    {"value": "5", "label": "SMS provider integrations"},
+    {"value": "Dozens", "label": "PatchGrid users"}
   ],
   "focus": [
-    "Backend systems",
-    "Integration & messaging",
+    "Backend & production systems",
+    "Integration & system boundaries",
     "SQL & data workflows",
-    "Production reliability",
+    "Reliability & operability",
     "AI-assisted engineering"
   ],
   "experience": [
@@ -42,117 +35,49 @@
       "company": "Quande Information Technology",
       "role": "Blockchain Systems Development Engineer",
       "location": "Remote",
-      "summary": "Own and evolve production backend systems spanning integrations, messaging, operational tooling, and reliability.",
+      "summary": "Own and evolve existing production systems spanning customer operations, messaging, integrations, data, deployment, and reliability.",
       "highlights": [
-        "Operate a notification platform delivering 1M+ push notifications and 50K+ SMS messages per day.",
-        "Integrated five SMS providers with configurable routing, retry, failure handling, and delivery-state tracking.",
-        "Maintain C#/.NET and SQL Server services on Azure and IIS, with production monitoring through Application Insights.",
-        "Improved user-facing performance with caching and AJAX lazy loading while guarding against race conditions with server-side revalidation."
+        "Operate a notification platform delivering 1M+ push notifications and 50K+ SMS messages per day across five SMS providers.",
+        "Own a customer-operations platform deployed to Azure Web App with VM and SQL-backed services; improved a 12-tab user view from blocking full-page loading to independently loaded and refreshable tabs.",
+        "Use application-side revalidation plus downstream state checks for operations that mutate external system state.",
+        "Maintain C#/.NET and SQL Server services across Azure and IIS, with production monitoring through Application Insights."
       ],
-      "stack": [
-        "C#",
-        ".NET",
-        "SQL Server",
-        "Azure",
-        "Dapper",
-        "IIS",
-        "Application Insights"
-      ]
+      "stack": ["C#", ".NET", "SQL Server", "Azure Web App", "Dapper", "IIS", "Application Insights"]
     },
     {
       "period": "Previous role · ~5 years",
       "company": "Education Budget & Accounting Platform",
       "role": "Software Engineer",
       "location": "Taiwan",
-      "summary": "Built and maintained a multi-school budgeting and accounting system with reporting, cross-school queries, and complex business rules.",
+      "summary": "Maintained and evolved a long-lived budgeting and accounting platform serving 3,300+ schools and roughly 15,000 users.",
       "highlights": [
-        "Worked on .NET 4.8 / SQL Server production systems deployed across multiple servers.",
-        "Optimized indexing, large queries, and overnight reporting workloads.",
-        "Implemented priority-based and EAV-style business logic for evolving budgeting requirements.",
-        "Supported procurement, acceptance, and finance workflows used across schools."
+        "Evolved .NET Framework / SQL Server production workflows while preserving compatibility with older fiscal-year data.",
+        "Introduced new fields incrementally rather than forcing incompatible schema assumptions onto historical records.",
+        "Supported decision-period aggregation by moving shared summary work to overnight processing when many schools needed the same calculations in a short window.",
+        "Owned production maintenance, reporting, SQL troubleshooting, and ongoing business-rule changes."
       ],
-      "stack": [
-        ".NET 4.8",
-        "SQL Server",
-        "IIS",
-        "Reporting",
-        "Query Optimization"
-      ]
+      "stack": [".NET Framework", "SQL Server", "IIS", "Reporting", "Legacy evolution"]
     },
     {
       "period": "Earlier career",
-      "company": "Duty-free Retail ETL & Incentive System",
+      "company": "Duty-free Retail Incentive Platform",
       "role": "Software Engineer",
       "location": "Taiwan",
-      "summary": "Worked on retail data integration and incentive-calculation pipelines.",
+      "summary": "Designed the ETL pipeline and co-designed the backend calculation model for a multi-store incentive-calculation system.",
       "highlights": [
-        "Built Oracle-to-SQL Server ETL flows with SSIS.",
-        "Processed high-volume monthly store data and multi-level bonus calculations.",
-        "Implemented stored-procedure-driven transformation and calculation workflows."
+        "Designed Oracle-to-SQL Server ETL flows for data from roughly 6–7 high-volume retail stores.",
+        "Handled incomplete records, encoding problems, invalid characters, failed records, and orphan data with explicit classification and replay paths.",
+        "Implemented complex incentive rules varying by store, product category, team, and specific products.",
+        "Replaced extensive manual report cross-referencing with system calculation so HR could focus on validation."
       ],
-      "stack": [
-        "Oracle",
-        "SQL Server",
-        "SSIS",
-        "Stored Procedures",
-        "ETL"
-      ]
+      "stack": ["Oracle", "SQL Server", "SSIS", "Stored Procedures", "ETL"]
     }
   ],
   "skills": [
-    {
-      "group": "Backend",
-      "items": [
-        "C#",
-        ".NET / ASP.NET",
-        "Web APIs",
-        "Dapper",
-        "SSE",
-        "Background processing"
-      ]
-    },
-    {
-      "group": "Data",
-      "items": [
-        "SQL Server",
-        "Oracle",
-        "Query optimization",
-        "ETL / SSIS",
-        "Data modeling",
-        "Reporting"
-      ]
-    },
-    {
-      "group": "Cloud & Ops",
-      "items": [
-        "Azure App Service",
-        "Azure Blob Storage",
-        "Azure SQL",
-        "Application Insights",
-        "IIS",
-        "Production monitoring"
-      ]
-    },
-    {
-      "group": "Integration",
-      "items": [
-        "SMS providers",
-        "Push notifications",
-        "Third-party APIs",
-        "Retry & routing",
-        "Delivery tracking",
-        "System integration"
-      ]
-    },
-    {
-      "group": "AI-assisted Delivery",
-      "items": [
-        "Grill → spec → tickets",
-        "AI-assisted coding",
-        "Scoped implementation",
-        "Code review",
-        "Verification workflows"
-      ]
-    }
+    {"group": "Backend", "items": ["C#", ".NET / ASP.NET", "Web APIs", "Dapper", "SSE", "Background processing"]},
+    {"group": "Data", "items": ["SQL Server", "Oracle", "Query optimization", "ETL / SSIS", "Data modeling", "Reporting"]},
+    {"group": "Cloud & Ops", "items": ["Azure App Service", "Azure Blob Storage", "Azure SQL", "Application Insights", "IIS", "Production monitoring"]},
+    {"group": "Integration", "items": ["Third-party APIs", "Messaging providers", "Modbus TCP", "Protocol integration", "Retry & state handling", "System boundaries"]},
+    {"group": "AI-assisted Delivery", "items": ["Problem framing", "Architecture & contracts", "Grill → spec → tickets", "AI-assisted implementation", "Code review", "Acceptance & verification"]}
   ]
 }
