@@ -1,25 +1,16 @@
 ---
 import '../../styles/global.css';
-const title = 'PatchGrid';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 ---
-<html lang="en">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>{title} — Case Study</title></head>
-<body>
-<main class="shell case-study">
-<a href={`${base}portfolio/`}>← Portfolio</a>
-<h1>{title}</h1>
-<p class="lead">Placeholder until project grill is completed.</p>
-<section><h2>Context</h2><p>TBD</p></section>
-<section><h2>Problem</h2><p>TBD</p></section>
-<section><h2>Constraints</h2><p>TBD</p></section>
-<section><h2>Architecture</h2><p>TBD</p></section>
-<section><h2>Key Decisions</h2><p>TBD</p></section>
-<section><h2>Reliability & Operations</h2><p>TBD</p></section>
-<section><h2>Scale / Metrics</h2><p>TBD</p></section>
-<section><h2>Trade-offs</h2><p>TBD</p></section>
-<section><h2>Outcome</h2><p>TBD</p></section>
-<section><h2>What I'd Improve Today</h2><p>TBD</p></section>
-</main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="PatchGrid production SaaS case study." /><title>PatchGrid — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a href={`${base}portfolio/`}>← Selected work</a>
+<p class="eyebrow">OWNED PRODUCT · PRODUCTION</p>
+<h1>PatchGrid</h1>
+<p class="lead">A production SaaS born from a real live-event coordination problem and now used by dozens of users.</p>
+<section><h2>The Problem</h2><p>Church and outside-event work often requires exchanging console and show files between operators, vendors, and production teams. Files accumulate dates, version numbers, “final” suffixes, and local copies until it becomes unclear which version is authoritative.</p></section>
+<section><h2>Product Direction</h2><p>PatchGrid turns that file handoff into an explicit workflow rather than relying on filenames and chat history. It also includes scheduled and real-time operational views used around live-production workflows.</p></section>
+<section><h2>Why it matters</h2><p>This is not a portfolio-only application. The problem came from repeated real-world use, the service is deployed, and dozens of users have used it. Product decisions therefore have to account for compatibility, migration, deployment, and existing behavior.</p></section>
+<section><h2>Modernization</h2><p>The system is being evolved toward a modern .NET and React architecture with stronger API boundaries, testing, CI/CD, observability, and clearer separation of responsibilities. Modernization is driven by maintainability and product needs rather than adding technologies for résumé keywords.</p></section>
+<section><h2>What this demonstrates</h2><p>Problem discovery from domain experience, shipping and operating an owned product, evolving architecture under real-user constraints, and balancing engineering modernization with product continuity.</p></section>
+</main></body></html>
