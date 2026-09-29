@@ -2,40 +2,107 @@
   {
     "slug": "patchgrid",
     "name": "PatchGrid",
-    "subtitle": "Production Monitoring & Delivery Platform",
-    "summary": "A production system for scheduled and real-time monitoring, operational visibility, and delivery tracking. Used as an ongoing modernization project and portfolio case study.",
-    "tags": [
-      "Production",
-      "Monitoring",
-      "Reliability"
-    ],
+    "category": "Owned Product",
+    "subtitle": "Live-event file delivery and coordination",
+    "summary": "Born from a real live-production problem: teams exchanging console and show files through filenames, dates, and version suffixes with no clear authoritative copy. PatchGrid is now a production SaaS used by dozens of users.",
+    "tags": ["Production SaaS", ".NET", "React", "Live audio"],
     "caseStudy": "/projects/patchgrid",
-    "status": "Live system"
+    "status": "Production · Dozens of users",
+    "featured": true
   },
   {
     "slug": "msar",
-    "name": "MSAR / ITRI",
-    "subtitle": "AI + GIS Search & Rescue Workflow",
-    "summary": "A modular search-and-rescue workflow coordinating GIS inputs, AI inference, expert rules, route analysis, post-processing, and delivery outputs under real project constraints.",
-    "tags": [
-      "AI",
-      "GIS",
-      "Workflow orchestration"
-    ],
+    "name": "MSAR V2 / ITRI",
+    "category": "Client Delivery",
+    "subtitle": "Computation orchestration across multiple teams",
+    "summary": "An integration layer connecting frontend requests, DB APIs, frequently changing computation modules, result artifacts, and persistence. The architecture isolates team-owned code behind explicit execution boundaries.",
+    "tags": ["Integration", "Orchestration", "Python", "Operational tooling"],
     "caseStudy": "/projects/msar",
-    "status": "Delivery project"
+    "status": "Delivered system",
+    "featured": true
   },
   {
     "slug": "messaging-platform",
     "name": "Messaging Platform",
-    "subtitle": "Multi-provider Notification Delivery",
-    "summary": "High-volume push and SMS delivery with multiple providers, configurable routing, retry behavior, delivery states, and operational monitoring.",
-    "tags": [
-      "SMS",
-      "Push",
-      "Integration"
-    ],
+    "category": "Professional",
+    "subtitle": "High-volume multi-provider notification delivery",
+    "summary": "Production push and SMS delivery handling 1M+ push notifications and 50K+ SMS messages per day, with five SMS providers, retry behavior, delivery-state tracking, and operational troubleshooting.",
+    "tags": ["C#", "SMS", "Push", "Integration", "Reliability"],
     "caseStudy": "/projects/messaging-platform",
-    "status": "Production"
+    "status": "Production",
+    "featured": true
+  },
+  {
+    "slug": "customer-operations",
+    "name": "Customer Operations Platform",
+    "category": "Professional",
+    "subtitle": "Production takeover and workflow performance",
+    "summary": "An existing operational platform I took over end-to-end. A 12-tab user detail view was changed from blocking full-page loading to independent lazy-loaded tabs, while sensitive state changes use layered revalidation.",
+    "tags": ["C#", "SQL Server", "Azure", "Performance", "Production ownership"],
+    "caseStudy": "/projects/customer-operations",
+    "status": "Production",
+    "featured": false
+  },
+  {
+    "slug": "duty-free-incentive",
+    "name": "Duty-free Incentive Platform",
+    "category": "Professional",
+    "subtitle": "Recoverable Oracle-to-SQL data workflow",
+    "summary": "ETL and calculation workflows for complex store, product, team, and item-specific incentive rules, including explicit handling of incomplete, malformed, failed, and orphan records.",
+    "tags": ["Oracle", "SQL Server", "SSIS", "ETL", "Data quality"],
+    "caseStudy": "/projects/duty-free-incentive",
+    "status": "Production delivery",
+    "featured": false
+  },
+  {
+    "slug": "bms-portal",
+    "name": "Residential BMS Portal",
+    "category": "Client Delivery",
+    "subtitle": "Legacy portal takeover, calculation and reporting",
+    "summary": "Extended an existing ASP.NET Framework portal for a large residential common-area BMS. Vendor-collected Modbus data lands in a database; the application adds electricity-cost estimation and equipment-point trend analysis.",
+    "tags": ["ASP.NET Framework", "SQL", "BMS", "Reporting", "Data workflows"],
+    "caseStudy": "/projects/bms-portal",
+    "status": "In use",
+    "featured": false
+  },
+  {
+    "slug": "ecclesia-nexus",
+    "name": "EcclesiaNexus",
+    "category": "Owned Product",
+    "subtitle": "Modular church operations platform",
+    "summary": "A greenfield product under active development, used to explore clear module boundaries, contracts, event-driven integration, and a local MIDI bridge without pretending planned architecture is already production.",
+    "tags": ["Go", "React", "Modular architecture", "MIDI"],
+    "status": "Active development",
+    "featured": false
+  },
+  {
+    "slug": "building-integrations",
+    "name": "Building Systems Integrations",
+    "category": "Selected Integration",
+    "subtitle": "Daikin HVAC and Lite-Puter lighting into Home Assistant",
+    "summary": "Real deployments integrating building systems beyond their vendor software: Modbus TCP for Daikin HVAC and a reverse-engineered proprietary UDP protocol for Lite-Puter lighting control.",
+    "tags": ["Home Assistant", "Modbus TCP", "UDP", "Protocol integration"],
+    "status": "In use",
+    "featured": false
+  },
+  {
+    "slug": "line-llm",
+    "name": "LINE + LLM Messaging Prototype",
+    "category": "Client Prototype",
+    "subtitle": "Conversational backend with persistent users and rooms",
+    "summary": "A working LINE-to-LLM prototype with a separate backend, JWT authentication, persistent chat rooms and messages, and Firestore. The engagement stopped before production when API operating cost changed the business case.",
+    "tags": ["LINE", "LLM", "Python", "Firestore", "JWT"],
+    "status": "Prototype · Not production",
+    "featured": false
+  },
+  {
+    "slug": "midas-iem",
+    "name": "Midas Personal IEM Controller",
+    "category": "Lab",
+    "subtitle": "Role-scoped monitor control over OSC",
+    "summary": "A prototype motivated by the native iOS app being too broad for musicians: expose only a user's own monitor mix and a deliberately limited control surface.",
+    "tags": ["OSC", "Audio systems", "Protocol integration", "UX boundary"],
+    "status": "Prototype",
+    "featured": false
   }
 ]
