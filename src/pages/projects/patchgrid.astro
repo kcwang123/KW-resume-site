@@ -4,10 +4,11 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="PatchGrid production SaaS case study." /><title>PatchGrid — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a>
 <p class="eyebrow">OWNED PRODUCT · PRODUCTION</p>
 <h1>PatchGrid</h1>
 <p class="lead">A production SaaS born from a real live-event coordination problem and now used by dozens of users.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Product & architecture owner</dd></div><div><dt>Status</dt><dd>Production SaaS</dd></div><div><dt>Usage</dt><dd>Dozens of users</dd></div><div><dt>Stack</dt><dd>.NET · React · CI/CD</dd></div></dl>
 <section><h2>The Problem</h2><p>Church and outside-event work often requires exchanging console and show files between operators, vendors, and production teams. Files accumulate dates, version numbers, “final” suffixes, and local copies until it becomes unclear which version is authoritative.</p></section>
 <section><h2>Product Direction</h2><p>PatchGrid turns that file handoff into an explicit workflow rather than relying on filenames and chat history. It also includes scheduled and real-time operational views used around live-production workflows.</p></section>
 <section><h2>Why it matters</h2><p>This is not a portfolio-only application. The problem came from repeated real-world use, the service is deployed, and dozens of users have used it. Product decisions therefore have to account for compatibility, migration, deployment, and existing behavior.</p></section>
