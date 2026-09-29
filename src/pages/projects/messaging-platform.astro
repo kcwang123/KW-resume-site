@@ -4,10 +4,11 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 ---
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="High-volume multi-provider messaging platform case study." /><title>Messaging Platform — Kevin Wang</title></head>
 <body><main class="shell case-study">
-<a href={`${base}portfolio/`}>← Selected work</a>
+<a class="case-back" href={`${base}portfolio/`}>← Selected work</a>
 <p class="eyebrow">PROFESSIONAL · PRODUCTION</p>
 <h1>Messaging Platform</h1>
 <p class="lead">A production notification system delivering more than 1M push notifications and 50K SMS messages per day across multiple external providers.</p>
+<dl class="case-facts"><div><dt>Role</dt><dd>Production owner</dd></div><div><dt>Status</dt><dd>Production</dd></div><div><dt>Scale</dt><dd>1M+ push · 50K+ SMS/day</dd></div><div><dt>Stack</dt><dd>C# · .NET · provider APIs</dd></div></dl>
 <section><h2>Context</h2><p>The platform is part of an existing production environment I own and evolve. Notification delivery has to work across provider boundaries while remaining observable enough to troubleshoot real delivery failures.</p></section>
 <section><h2>Scale & Integration</h2><p>The system handles 1M+ push notifications and 50K+ SMS messages per day. SMS delivery integrates five providers behind application-level service boundaries, with configurable routing, result logging, delivery states, and retry behavior.</p></section>
 <section><h2>Reliability</h2><p>External delivery is not treated as a single successful API call. Provider results are persisted and failed work can be retried. Operational troubleshooting focuses on the state transition from scheduled work through provider execution and recorded result.</p></section>
