@@ -12,7 +12,7 @@
 .hero-note ul{list-style:none;padding:0;margin:22px 0}
 .hero-note li{padding:10px 0;border-bottom:1px solid var(--border);font-size:.9rem}
 .hero-note small{color:var(--muted);line-height:1.6}
-.metrics-strip{display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid var(--border)}
+.metrics-strip{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--border)}
 .metrics-strip article{padding:25px 18px 28px;border-right:1px solid var(--border)}
 .metrics-strip article:first-child{padding-left:0}
 .metrics-strip article:last-child{border-right:0}
@@ -28,7 +28,7 @@
 .experience-item{display:grid;grid-template-columns:180px minmax(0,1fr) 40px;gap:34px;padding:45px 0;border-bottom:1px solid var(--border)}
 .experience-meta{display:flex;flex-direction:column;gap:8px;font:.78rem/1.4 "IBM Plex Mono",monospace}
 .experience-meta small{color:var(--muted)}
-.experience-body .role{font:600 .75rem/1 "IBM Plex Mono",monospace;color:var(--accent);text-transform:uppercase;margin:0 0 8px}
+.experience-body .role{font:600 .75rem/1 "IBM Plex Mono",monospace;color:var(--accent);text-transform:uppercase;margin:0 0 6px}\n.official-title{font:500 .68rem/1.4 "IBM Plex Mono",monospace;color:var(--muted);margin:0 0 10px}
 .experience-body h3{font-size:1.65rem;margin:0 0 14px;letter-spacing:-.035em}
 .job-summary{font-weight:500;max-width:770px}
 .experience-body ul{color:var(--muted);line-height:1.7;padding-left:1.2em;max-width:850px}
