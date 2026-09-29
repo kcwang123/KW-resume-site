@@ -1,0 +1,15 @@
+---
+import '../../styles/global.css';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Residential BMS Portal — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">CLIENT DELIVERY · LEGACY TAKEOVER</p>
+<h1>Residential BMS Portal</h1>
+<p class="lead">Extending an existing ASP.NET Framework portal used to manage and analyze a large residential common-area building-management system.</p>
+<section><h2>Context</h2><p>The BMS vendor already collects field data over Modbus TCP and writes aggregated values into a database. The original application developer was no longer available, so I took over the existing portal codebase rather than replacing the system.</p></section>
+<section><h2>Application Work</h2><p>I build on top of the vendor-collected database data to add electricity-cost estimation and selected equipment-point trend analysis in chart and table form.</p></section>
+<section><h2>Historical Data</h2><p>The application currently works mainly with hourly aggregated values rather than claiming ownership of raw telemetry ingestion. Supporting data-cleaning and aggregation work handles the historical-data lifecycle needed by reporting.</p></section>
+<section><h2>Boundary</h2><p>Field acquisition remains the BMS vendor's responsibility. My responsibility begins at the persisted data and existing ASP.NET application layer: calculations, reporting, presentation, and maintaining the inherited codebase.</p></section>
+<section><h2>What this demonstrates</h2><p>Legacy application takeover, working inside a vendor ecosystem without rewriting it, SQL-backed reporting, domain calculations, and clear ownership boundaries.</p></section>
+</main></body></html>
