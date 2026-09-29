@@ -3,40 +3,51 @@ import projects from '../../data/projects.json';
 import '../../styles/global.css';
 import '../../styles/visual.css';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected Integration', 'Client Prototype', 'Lab'];
 ---
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="description" content="Selected backend systems and technical case studies by Kevin Wang." />
-  <title>Portfolio — Kevin Wang</title>
+  <meta name="description" content="Professional systems, client delivery, independent products, and selected integrations by Kevin Wang." />
+  <title>Selected Work — Kevin Wang</title>
 </head>
 <body class="visual-theme">
 <header class="topbar shell"><a class="brand" href={base}>KW</a><nav><a href={base}>Resume</a><a href={base + 'console/'}>Console</a></nav></header>
 <main class="shell">
   <section class="resume-hero portfolio-hero">
     <div class="hero-copy">
-      <p class="eyebrow">PORTFOLIO / SYSTEMS</p>
-      <h1>Selected work.</h1>
-      <h2>The details that do not belong in a one-page resume.</h2>
-      <p class="lead">Architecture, delivery constraints, production behavior, trade-offs, and what I would modernize today.</p>
+      <p class="eyebrow">SELECTED WORK / EVIDENCE</p>
+      <h1>Systems across boundaries.</h1>
+      <h2>Professional production work, client delivery, owned products, and selected integrations.</h2>
+      <p class="lead">The technologies vary. The recurring work is the same: define contracts, isolate ownership, handle state and failure, and make the result operable.</p>
     </div>
   </section>
-  <section class="portfolio-list">
-    {projects.map((p, index) => (
-      <article>
-        <div class="work-number">0{index + 1}</div>
-        <div class="portfolio-copy">
-          <small>{p.status}</small>
-          <h2>{p.name}</h2>
-          <h3>{p.subtitle}</h3>
-          <p>{p.summary}</p>
-          <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
+
+  {groups.map((group) => {
+    const items = projects.filter((project) => project.category === group);
+    if (!items.length) return null;
+    return (
+      <section class="resume-section">
+        <div class="section-kicker">{group.toUpperCase()}</div>
+        <div class="portfolio-list">
+          {items.map((p, index) => (
+            <article>
+              <div class="work-number">{String(index + 1).padStart(2, '0')}</div>
+              <div class="portfolio-copy">
+                <small>{p.status}</small>
+                <h2>{p.name}</h2>
+                <h3>{p.subtitle}</h3>
+                <p>{p.summary}</p>
+                <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
+              </div>
+              {p.caseStudy ? <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study →</a> : <span></span>}
+            </article>
+          ))}
         </div>
-        <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study →</a>
-      </article>
-    ))}
-  </section>
+      </section>
+    );
+  })}
 </main>
 </body>
 </html>
