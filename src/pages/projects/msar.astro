@@ -1,25 +1,18 @@
 ---
 import '../../styles/global.css';
-const title = 'MSAR / ITRI';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 ---
-<html lang="en">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>{title} — Case Study</title></head>
-<body>
-<main class="shell case-study">
-<a href={`${base}portfolio/`}>← Portfolio</a>
-<h1>{title}</h1>
-<p class="lead">Placeholder until project grill is completed.</p>
-<section><h2>Context</h2><p>TBD</p></section>
-<section><h2>Problem</h2><p>TBD</p></section>
-<section><h2>Constraints</h2><p>TBD</p></section>
-<section><h2>Architecture</h2><p>TBD</p></section>
-<section><h2>Key Decisions</h2><p>TBD</p></section>
-<section><h2>Reliability & Operations</h2><p>TBD</p></section>
-<section><h2>Scale / Metrics</h2><p>TBD</p></section>
-<section><h2>Trade-offs</h2><p>TBD</p></section>
-<section><h2>Outcome</h2><p>TBD</p></section>
-<section><h2>What I'd Improve Today</h2><p>TBD</p></section>
-</main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="MSAR V2 computation orchestration and integration case study." /><title>MSAR V2 / ITRI — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a href={`${base}portfolio/`}>← Selected work</a>
+<p class="eyebrow">CLIENT DELIVERY · INTEGRATION</p>
+<h1>MSAR V2 / ITRI</h1>
+<p class="lead">An integration and computation-orchestration layer coordinating frontend requests, database APIs, independently developed computation modules, result artifacts, and persistence.</p>
+<section><h2>Context</h2><p>V1 had already been delivered. V2 required architectural changes and new integrations while multiple teams continued to own and update their own computation code.</p></section>
+<section><h2>My Boundary</h2><p>I own the computation application and DB API layer: frontend request → DB API → computation service → data acquisition → decide which computations run, skip, or combine → execute → generate results and layers → return through the DB API for persistence.</p></section>
+<section><h2>Cross-team Contracts</h2><p>The work requires coordinating interfaces on both sides: request parameters and persistence with the application/database side, and execution inputs plus output layer artifacts with computation teams.</p></section>
+<section><h2>Architecture Decision</h2><p>Frequently merging other teams' changing code into the core application created unnecessary coupling. I changed the model toward isolated environments and slot/plugin-like execution: team-owned code can remain closer to its original form while the orchestration layer owns the execution contract and lifecycle.</p></section>
+<section><h2>Operability</h2><p>An operational portal makes the pipeline inspectable rather than opaque, including run inspection, effective configuration, fallback tracing, readiness checks, pipeline flow, delivery validation, and result-artifact inspection.</p></section>
+<section><h2>AI-assisted Delivery</h2><p>I define the architecture, system boundaries, contracts, and acceptance criteria. AI is used to accelerate detailed design and implementation, with the resulting system reviewed against those boundaries rather than treating generated code as the architecture owner.</p></section>
+<section><h2>What this demonstrates</h2><p>Integration ownership across companies and teams, decomposition of frequently changing code, orchestration, operational visibility, and architecture driven by real ownership constraints.</p></section>
+</main></body></html>
