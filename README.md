@@ -1,19 +1,17 @@
 # KW Resume Site
 
-Two resume presentations, one shared data layer.
+Personal resume and portfolio for Kevin Wang, deployed at https://kcwang.cyou.
 
-- `/` — Card / Visual resume
-- `/console/` — Developer Console resume
-- `/portfolio/` — portfolio index
-- `/projects/*` — case study routes
+- `/` — Card / visual resume
+- `/console/` — Developer console resume
+- `/portfolio/` — Portfolio index
+- `/projects/*` — Case study routes
 
 ## Shared data
 
 - `src/data/resume.json`
 - `src/data/projects.json`
 - `src/data/systems.json`
-
-The current content is intentionally incomplete until the next resume / project / systems grill.
 
 ## Local development
 
@@ -22,8 +20,10 @@ npm install
 npm run dev
 ```
 
-## GitHub Pages
+## Production build
 
-Deploys from `main` with `.github/workflows/deploy-pages.yml`.
+```bash
+npm run build
+```
 
-Deployment trigger: enabled.
+The static output is written to `dist/`. Production hosting is intended for Cloudflare Pages with the custom domain `kcwang.cyou`.
