@@ -76,7 +76,8 @@ const featuredProjects = projects.filter((project) => project.featured);
           <article class="experience-item">
             <div class="experience-meta"><span>{job.period}</span><small>{job.location}</small></div>
             <div class="experience-body">
-              <p class="role">{job.role}</p>\n              {job.officialTitle && <p class="official-title">Official title: {job.officialTitle}</p>}
+              <p class="role">{job.role}</p>
+              {job.officialTitle && <p class="official-title">Official title: {job.officialTitle}</p>}
               <h3>{job.company}</h3>
               <p class="job-summary">{job.summary}</p>
               <ul>{job.highlights.map((item) => <li>{item}</li>)}</ul>
