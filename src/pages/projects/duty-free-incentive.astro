@@ -1,0 +1,16 @@
+---
+import '../../styles/global.css';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Duty-free Incentive Platform — Kevin Wang</title></head>
+<body><main class="shell case-study">
+<a href={`${base}portfolio/`}>← Selected work</a><p class="eyebrow">PROFESSIONAL · DATA INTEGRATION</p>
+<h1>Duty-free Incentive Platform</h1>
+<p class="lead">A recoverable Oracle-to-SQL Server ETL and incentive-calculation workflow for roughly 6–7 high-volume retail stores.</p>
+<section><h2>My Role</h2><p>I designed the ETL pipeline and co-designed the backend calculation model with my manager.</p></section>
+<section><h2>Data Reality</h2><p>Long-running transfers and source data could produce incomplete records, encoding problems, invalid characters, failed rows, and orphan data. The workflow explicitly classified successful, failed, and orphan records instead of assuming every batch was clean.</p></section>
+<section><h2>Recovery</h2><p>Operators could identify which data required another attempt and selectively replay it, while retaining the option to rerun a full set when appropriate. Recovery was part of the workflow rather than an ad-hoc manual repair step.</p></section>
+<section><h2>Business Rules</h2><p>Incentive calculations varied by store, product category, team, and specific products, with multiple conditions needing to hold at the same time. The calculation model had to make those rules repeatable over imported operational data.</p></section>
+<section><h2>Outcome</h2><p>HR previously cross-referenced and validated many reports manually. The system took over the data processing and calculation work so people could focus primarily on validation.</p></section>
+<section><h2>What this demonstrates</h2><p>ETL ownership, data-quality handling, recoverable batch processing, complex business rules, and automation of a high-friction human workflow.</p></section>
+</main></body></html>
