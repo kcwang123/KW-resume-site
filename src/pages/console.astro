@@ -11,11 +11,11 @@ const featuredProjects = projects.filter((project) => project.featured);
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="description" content={resume.profile.summary} />
+  <meta name="description" content={resume.profile.summary} />\n  <meta name="theme-color" content="#07100d" />\n  <link rel="canonical" href="https://kcwang.cyou/console/" />
   <title>{resume.profile.name} — Developer Console Resume</title>
 </head>
-<body class="console-theme">
-<main class="terminal-shell">
+<body class="console-theme">\n<a class="skip-link" href="#console-main">Skip to console</a>
+<main id="console-main" class="terminal-shell">
   <header class="console-header">
     <div class="window-dots"><i></i><i></i><i></i></div>
     <nav><a href={base}>visual_resume</a><a href={base + 'portfolio/'}>portfolio</a></nav>
