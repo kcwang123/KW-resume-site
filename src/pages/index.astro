@@ -12,6 +12,7 @@ const featuredProjects = projects.filter((project) => project.featured);
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <meta name="description" content={resume.profile.summary} />
+  <meta name="theme-color" content="#f2f4ef" />
   <link rel="canonical" href="https://kcwang.cyou/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kcwang.cyou/" />
@@ -28,56 +29,76 @@ const featuredProjects = projects.filter((project) => project.featured);
   <title>{resume.profile.name} — {resume.profile.title}</title>
 </head>
 <body class="visual-theme">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar shell">
-    <a class="brand" href={base}>KW</a>
-    <nav>
+    <a class="brand" href={base} aria-label="KC Wang home"><span>KC</span><small>WANG</small></a>
+    <nav aria-label="Primary navigation">
       <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href={base + 'portfolio/'}>Work</a>
+      <a href={base + 'portfolio/'}>Selected work</a>
       <a href={base + 'console/'}>Console</a>
+      <a class="nav-link-strong" href={resume.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
   </header>
 
-  <main class="shell">
-    <section class="resume-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">SENIOR BACKEND / SYSTEMS / INTEGRATION ENGINEER</p>
-        <h1>{resume.profile.name}</h1>
+  <main id="main">
+    <section class="resume-hero shell">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">SENIOR BACKEND · SYSTEMS · INTEGRATION</p>
+        <h1><span>Kevin</span> Wang</h1>
         <h2>{resume.profile.tagline}</h2>
         <p class="lead">{resume.profile.summary}</p>
-        <div class="availability"><span></span>{resume.profile.location} · Remote</div>
+        <div class="availability"><span aria-hidden="true"></span>{resume.profile.location} · UTC+8 · Remote</div>
         <div class="actions">
-          <a class="primary" href="#experience">View experience</a>
-          <a href={base + 'portfolio/'}>Selected work</a>
-          <a href={resume.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="primary" href={base + 'portfolio/'}>Explore selected work <span>↗</span></a>
+          <a href="#experience">13+ years of experience</a>
         </div>
       </div>
-      <aside class="hero-note">
-        <p>Current focus</p>
-        <ul>{resume.focus.map((item) => <li>{item}</li>)}</ul>
-        <small>Production ownership, integration boundaries, reliability, and maintainable delivery — with AI used as an implementation accelerator rather than an architecture substitute.</small>
+
+      <aside class="system-map" aria-label="Engineering approach" data-reveal>
+        <div class="map-head"><span>OPERATING MODEL</span><small>01 / 03</small></div>
+        <div class="map-stage map-stage-a"><i></i><div><small>INPUT</small><strong>Ambiguous reality</strong><span>Legacy · vendors · data · people</span></div></div>
+        <div class="map-connector"><span>FRAME</span></div>
+        <div class="map-stage map-stage-b"><i></i><div><small>ENGINEERING</small><strong>Explicit boundaries</strong><span>Contracts · state · failure modes</span></div></div>
+        <div class="map-connector"><span>OPERATE</span></div>
+        <div class="map-stage map-stage-c"><i></i><div><small>OUTPUT</small><strong>Reliable workflow</strong><span>Observable · maintainable · safe to change</span></div></div>
       </aside>
     </section>
 
-    <section class="metrics-strip" aria-label="Career metrics">
-      {resume.metrics.map((m) => (
-        <article><strong>{m.value}</strong><span>{m.label}</span></article>
-      ))}
+    <section class="signal-band">
+      <div class="shell metrics-strip" aria-label="Career evidence">
+        {resume.metrics.map((m, index) => (
+          <article data-reveal>
+            <span class="metric-index">0{index + 1}</span>
+            <strong>{m.value}</strong>
+            <span>{m.label}</span>
+          </article>
+        ))}
+      </div>
     </section>
 
-    <section id="experience" class="resume-section">
+    <section class="positioning shell" data-reveal>
+      <p class="section-kicker">THE PATTERN</p>
+      <blockquote>
+        “The technology changes. The job stays the same: find the boundary where reality gets messy, make the contract explicit, and make failure recoverable.”
+      </blockquote>
+      <div class="positioning-notes">
+        <span>Production ownership</span><span>Integration boundaries</span><span>Reliability</span><span>Incremental modernization</span>
+      </div>
+    </section>
+
+    <section id="experience" class="resume-section shell">
       <div class="section-kicker">01 / PROFESSIONAL EXPERIENCE</div>
       <div class="section-title">
-        <h2>Production systems, not demo apps.</h2>
-        <p>Most of my work starts with an existing system, real users, legacy constraints, and a boundary that needs to become reliable.</p>
+        <h2>Production systems,<br/><em>not demo apps.</em></h2>
+        <p>Existing users. Existing constraints. Systems that cannot simply stop while they are being improved.</p>
       </div>
       <div class="experience-list">
         {resume.experience.map((job, index) => (
-          <article class="experience-item">
+          <article class="experience-item" data-reveal>
             <div class="experience-meta"><span>{job.period}</span><small>{job.location}</small></div>
             <div class="experience-body">
               <p class="role">{job.role}</p>
-              {job.officialTitle && <p class="official-title">Official title: {job.officialTitle}</p>}
+              {job.officialTitle && <p class="official-title">Official title · {job.officialTitle}</p>}
               <h3>{job.company}</h3>
               <p class="job-summary">{job.summary}</p>
               <ul>{job.highlights.map((item) => <li>{item}</li>)}</ul>
@@ -89,25 +110,30 @@ const featuredProjects = projects.filter((project) => project.featured);
       </div>
     </section>
 
-    <section id="skills" class="resume-section">
-      <div class="section-kicker">02 / CORE SKILLS</div>
-      <div class="section-title compact"><h2>What I use to get systems shipped.</h2></div>
-      <div class="skills-grid">
-        {resume.skills.map((skill) => (
-          <article><h3>{skill.group}</h3><ul>{skill.items.map((item) => <li>{item}</li>)}</ul></article>
-        ))}
+    <section id="skills" class="resume-section skills-section">
+      <div class="shell">
+        <div class="section-kicker">02 / ENGINEERING RANGE</div>
+        <div class="section-title">
+          <h2>Deep where it matters.<br/><em>Broad at the boundaries.</em></h2>
+          <p>Current-stack strength in .NET and SQL, with enough systems range to own the integration surface around them.</p>
+        </div>
+        <div class="skills-grid">
+          {resume.skills.map((skill, index) => (
+            <article data-reveal><span class="skill-index">0{index + 1}</span><h3>{skill.group}</h3><ul>{skill.items.map((item) => <li>{item}</li>)}</ul></article>
+          ))}
+        </div>
       </div>
     </section>
 
-    <section class="resume-section">
-      <div class="section-kicker">03 / SELECTED WORK</div>
+    <section class="resume-section shell">
+      <div class="section-kicker">03 / SELECTED EVIDENCE</div>
       <div class="section-title">
-        <h2>Three systems that show the pattern.</h2>
-        <a href={base + 'portfolio/'}>Professional, client & independent work →</a>
+        <h2>Three systems.<br/><em>One engineering pattern.</em></h2>
+        <a href={base + 'portfolio/'}>View the full evidence archive ↗</a>
       </div>
       <div class="selected-work">
         {featuredProjects.map((p, index) => (
-          <article>
+          <article data-reveal>
             <div class="work-number">0{index + 1}</div>
             <div>
               <small>{p.category} · {p.status}</small>
@@ -116,20 +142,44 @@ const featuredProjects = projects.filter((project) => project.featured);
               <p>{p.summary}</p>
               <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
             </div>
-            {p.caseStudy && <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Open →</a>}
+            {p.caseStudy && <a class="work-link" href={base + p.caseStudy.replace(/^\//, '') + '/'} aria-label={`Read ${p.name} case study`}>Case study <span>↗</span></a>}
           </article>
         ))}
       </div>
     </section>
 
-    <section class="closing">
-      <p class="eyebrow">REMOTE · TAIWAN</p>
-      <h2>Backend, integration, production ownership.</h2>
-      <p>I work best where software has to cross boundaries: legacy applications, databases, external providers, computation modules, devices, and the people operating them.</p>
-      <div class="actions"><a class="primary" href={base + 'portfolio/'}>View selected work</a><a href={base + 'console/'}>Open developer console</a></div>
+    <section class="closing shell" data-reveal>
+      <div>
+        <p class="eyebrow">TAIWAN · UTC+8 · REMOTE</p>
+        <h2>Bring me the system<br/>nobody wants to touch.</h2>
+      </div>
+      <div class="closing-copy">
+        <p>I work best where software crosses boundaries: long-lived applications, databases, external providers, computation modules, devices, and the people operating them.</p>
+        <div class="actions"><a class="primary" href={base + 'portfolio/'}>See the evidence <span>↗</span></a><a href={base + 'console/'}>Developer console</a></div>
+      </div>
     </section>
   </main>
 
-  <footer class="shell"><span>Kevin Wang · {new Date().getFullYear()}</span><span>Senior Backend / Systems / Integration Engineer</span></footer>
+  <footer class="shell"><span>Kevin Wang · {new Date().getFullYear()}</span><span>Senior Backend / Systems / Integration Engineer · Taiwan</span></footer>
+
+  <script is:inline>
+    const reveal = () => {
+      const nodes = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        nodes.forEach((node) => node.classList.add('is-visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .12 });
+      nodes.forEach((node) => observer.observe(node));
+    };
+    reveal();
+  </script>
 </body>
 </html>
