@@ -9,14 +9,17 @@ const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected In
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="description" content="Production systems, client delivery, owned products, and integration case studies by Senior Backend / Systems / Integration Engineer Kevin Wang." />\n  <meta name="theme-color" content="#f2f4ef" />\n  <link rel="canonical" href="https://kcwang.cyou/portfolio/" />
+  <meta name="description" content="Production systems, client delivery, owned products, and integration case studies by Senior Backend / Systems / Integration Engineer Kevin Wang." />
+  <meta name="theme-color" content="#f2f4ef" />
+  <link rel="canonical" href="https://kcwang.cyou/portfolio/" />
   <title>Selected Work — Kevin Wang</title>
 </head>
-<body class="visual-theme">\n<a class="skip-link" href="#work">Skip to work</a>
-<header class="topbar shell"><a class="brand" href={base}>KW</a><nav><a href={base}>Resume</a><a href={base + 'console/'}>Console</a></nav></header>
+<body class="visual-theme">
+<a class="skip-link" href="#work">Skip to work</a>
+<header class="topbar shell"><a class="brand" href={base}><span>KC</span><small>WANG</small></a><nav><a href={base}>Resume</a><a href={base + 'console/'}>Console</a></nav></header>
 <main id="work" class="shell">
   <section class="resume-hero portfolio-hero">
-    <div class="hero-copy">
+    <div class="hero-copy" data-reveal>
       <p class="eyebrow">SELECTED WORK / EVIDENCE</p>
       <h1>Systems across<br/>boundaries.</h1>
       <h2>Evidence over keywords.</h2>
@@ -32,7 +35,7 @@ const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected In
         <div class="section-kicker">{group.toUpperCase()}</div>
         <div class="portfolio-list">
           {items.map((p, index) => (
-            <article>
+            <article data-reveal>
               <div class="work-number">{String(index + 1).padStart(2, '0')}</div>
               <div class="portfolio-copy">
                 <small>{p.status}</small>
@@ -41,7 +44,7 @@ const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected In
                 <p>{p.summary}</p>
                 <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
               </div>
-              {p.caseStudy ? <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study →</a> : <span></span>}
+              {p.caseStudy ? <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study ↗</a> : <span></span>}
             </article>
           ))}
         </div>
@@ -49,5 +52,19 @@ const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected In
     );
   })}
 </main>
+<script is:inline>
+  const nodes = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    nodes.forEach((n) => n.classList.add('is-visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    }), { threshold: .08 });
+    nodes.forEach((n) => observer.observe(n));
+  }
+</script>
 </body>
 </html>
