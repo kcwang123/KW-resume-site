@@ -55,3 +55,5 @@
   .console-projects article{grid-template-columns:1fr}
   .console-header nav a:first-child{display:none}
 }\n.console-theme .official-title{color:#718a7f;font-size:.68rem;margin:0 0 10px}\n
+.console-theme::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;background:repeating-linear-gradient(180deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 4px);mix-blend-mode:screen}
+.console-theme .skip-link{background:var(--green);color:#07100d}
