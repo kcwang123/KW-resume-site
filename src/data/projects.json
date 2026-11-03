@@ -36,7 +36,7 @@
     "name": "Messaging Platform",
     "category": "Professional",
     "subtitle": "High-volume multi-provider notification delivery",
-    "summary": "Production push and SMS delivery handling 1M+ push notifications and 50K+ SMS messages per day, with five SMS providers, retry behavior, delivery-state tracking, and operational troubleshooting.",
+    "summary": "Production push and SMS delivery across multiple external providers, including retry behavior, delivery-state tracking, and operational troubleshooting.",
     "tags": [
       "C#",
       "SMS",
