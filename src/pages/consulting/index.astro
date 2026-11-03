@@ -144,9 +144,43 @@ const caseStudies = [
         </div>
       </section>
 
+      <section class="consult-owned shell" id="independent-projects" aria-labelledby="owned-title">
+        <p class="section-kicker">04 / INDEPENDENT ENGINEERING</p>
+        <div class="consult-section-head">
+          <h2 id="owned-title">The work behind<br /><em>the experience.</em></h2>
+          <p>Alongside long-term enterprise systems work, I build and maintain independent software. Each example has a different proof level: public source code, a product case study, or an in-progress architecture write-up.</p>
+        </div>
+        <div class="consult-owned-grid">
+          <article>
+            <div class="owned-top"><span>01 / OWNED PRODUCT</span><span>CASE STUDY · PRIVATE CODE</span></div>
+            <h3>PatchGrid</h3>
+            <p class="owned-summary">Live-production coordination software for technical crews, combining collaborative frontend workflows and backend integration boundaries.</p>
+            <p class="owned-proof">React · TypeScript · API Integration · Data / Realtime</p>
+            <p class="owned-caveat">An actively evolved product. Detailed implementation and deployment claims are discussed only when independently verifiable.</p>
+            <a href={base + 'projects/patchgrid/'}>Read product case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article>
+            <div class="owned-top"><span>02 / SYSTEMS ARCHITECTURE</span><span>IN DEVELOPMENT · PRIVATE CODE</span></div>
+            <h3>EcclesiaNexus</h3>
+            <p class="owned-summary">A hybrid cloud/edge application exploring clear ownership boundaries across an API service, relational cloud data, and offline-capable edge workflows.</p>
+            <p class="owned-proof">Go · PostgreSQL · SQLite · React · Cloud / Edge</p>
+            <p class="owned-caveat">An ongoing engineering project, not presented as a fully deployed or commercially validated product.</p>
+            <a href={base + 'projects/ecclesia-nexus/'}>Read architecture case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article>
+            <div class="owned-top"><span>03 / OPEN SOURCE</span><span>PUBLIC REPOSITORY</span></div>
+            <h3>Home Assistant × Daikin</h3>
+            <p class="owned-summary">A custom integration for a Daikin Modbus TCP gateway, including device discovery, Home Assistant configuration, command handling, and diagnostics.</p>
+            <p class="owned-proof">Python · Modbus TCP · Home Assistant · Diagnostics</p>
+            <p class="owned-caveat">Source code and usage documentation are public. This is an integration example, not a claim of commercial deployment scale.</p>
+            <a href="https://github.com/kcwang123/HACS-daikin-dta116-pro" target="_blank" rel="noopener noreferrer">Inspect public source code <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
       <section class="consult-fit shell" aria-labelledby="fit-title">
         <div>
-          <p class="section-kicker">04 / WORKING MODEL</p>
+          <p class="section-kicker">05 / WORKING MODEL</p>
           <h2 id="fit-title">A senior partner.<br /><em>A realistic scope.</em></h2>
         </div>
         <div class="fit-copy">
