@@ -4,7 +4,7 @@
     "name": "PatchGrid",
     "category": "Owned Product",
     "subtitle": "Live-event file delivery and coordination",
-    "summary": "Born from a real live-production problem: teams exchanging console and show files through filenames, dates, and version suffixes with no clear authoritative copy. PatchGrid is now a production SaaS used by dozens of users.",
+    "summary": "Born from a real live-production problem: teams exchanging console and show files through filenames, dates, and version suffixes with no clear authoritative copy. PatchGrid is an independently built production-oriented coordination application.",
     "tags": [
       "Production SaaS",
       ".NET",
@@ -12,7 +12,7 @@
       "Live audio"
     ],
     "caseStudy": "/projects/patchgrid",
-    "status": "Production · Dozens of users",
+    "status": "Active owned product",
     "featured": true
   },
   {
