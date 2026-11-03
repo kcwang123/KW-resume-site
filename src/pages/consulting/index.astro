@@ -1,0 +1,172 @@
+---
+import '../../styles/global.css';
+import '../../styles/consulting.css';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const schedulingUrl = 'https://calendly.com/kcwang123/30min';
+const strengths = [
+  {
+    marker: '01',
+    title: 'Backend & integration ownership',
+    detail: 'When external APIs, providers, and long-lived services create fragile handoffs, I help clarify contracts, identify failure modes, and ship bounded improvements.'
+  },
+  {
+    marker: '02',
+    title: 'SQL Server & legacy systems',
+    detail: 'For slow queries, difficult historical data, and .NET applications that cannot simply stop, I focus on evidence-led diagnosis and compatible changes.'
+  },
+  {
+    marker: '03',
+    title: 'Production reliability & data workflows',
+    detail: 'I work across application code, databases, operational tooling, and recovery paths to make production behavior easier to understand and maintain.'
+  }
+];
+const caseStudies = [
+  {
+    name: 'Multi-channel messaging integration',
+    category: 'API / PROVIDER RELIABILITY',
+    challenge: 'Several notification channels and third-party services needed different failure and recovery behavior.',
+    contribution: 'Built a shared integration boundary, configurable provider selection, and retry-oriented scheduled workflows; investigated an operational logging issue.',
+    lesson: 'Reliable delivery starts by making guarantees and trade-offs explicit.'
+  },
+  {
+    name: 'Long-lived SQL Server application',
+    category: 'PRODUCTION DIAGNOSTICS',
+    challenge: 'Queries that behaved acceptably in small environments became expensive against historical production data.',
+    contribution: 'Investigated real query behavior, constrained unnecessarily broad requests, and supported incremental schema evolution.',
+    lesson: 'A scoped, compatible fix can be safer and more useful than a rewrite.'
+  }
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Fractional senior backend and systems integration consulting for .NET, SQL Server, Azure, APIs, and production troubleshooting. Taiwan-based, remote by appointment." />
+    <meta name="theme-color" content="#f2f4ef" />
+    <link rel="canonical" href="https://kcwang.cyou/consulting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kcwang.cyou/consulting/" />
+    <meta property="og:title" content="Backend & Systems Consulting — KC Wang" />
+    <meta property="og:description" content="Scoped senior engineering help for existing production systems, integrations, and SQL Server." />
+    <meta name="twitter:card" content="summary" />
+    <title>Backend & Systems Consulting — KC Wang</title>
+  </head>
+  <body class="consulting-theme">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar shell consulting-header">
+      <a class="brand" href={base} aria-label="KC Wang home"><span>KC</span><small>WANG</small></a>
+      <nav aria-label="Primary navigation">
+        <a href={base}>Resume</a>
+        <a href={base + 'portfolio/'}>Selected work</a>
+        <a class="nav-link-strong" href="#services" aria-current="page">Consulting</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="consult-hero shell" aria-labelledby="consult-headline">
+        <div>
+          <p class="eyebrow">CYMATIC LOGIC / BACKEND & SYSTEMS CONSULTING</p>
+          <h1 id="consult-headline">Complex systems.<br /><em>Clear ownership.</em></h1>
+          <p class="consult-lead">Fractional senior engineering for the backend systems your business already depends on. I help teams untangle integrations, diagnose production issues, and make practical changes to long-lived .NET and SQL Server applications.</p>
+          <div class="consult-tags" aria-label="Specialties"><span>C# / .NET</span><span>SQL Server</span><span>Azure / IIS</span><span>API Integration</span></div>
+          <div class="consult-actions">
+            <a class="primary" href={schedulingUrl} target="_blank" rel="noopener noreferrer">Schedule an intro call <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="#services">Explore services <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="consult-availability"><span class="availability-dot" aria-hidden="true"></span> Taiwan · UTC+8 · Initially 10–15 hours/week · Meetings by advance appointment</p>
+        </div>
+        <aside class="consult-panel" aria-label="Engagement approach">
+          <p class="panel-label">HOW I APPROACH A SYSTEM</p>
+          <ol>
+            <li><small>DISCOVER</small><strong>Identify the actual bottleneck.</strong><p>Understand the environment, stakeholders, operational symptoms, and constraints.</p></li>
+            <li><small>BOUND</small><strong>Agree on a defensible scope.</strong><p>Define interfaces, assumptions, failure modes, acceptance criteria, and risk.</p></li>
+            <li><small>DELIVER</small><strong>Change carefully. Verify clearly.</strong><p>Ship scoped improvements, review evidence, and document the operating handoff.</p></li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="consult-problems" aria-labelledby="problems-title">
+        <div class="shell">
+          <p class="section-kicker">01 / THE PROBLEMS</p>
+          <div class="consult-section-head"><h2 id="problems-title">The work that gets<br /><em>stuck between teams.</em></h2><p>You may have plenty of developers and still need experienced ownership across code, databases, infrastructure, providers, and operational risk.</p></div>
+          <div class="consult-problem-grid">
+            {strengths.map((item) => (
+              <article>
+                <span class="consult-index">{item.marker}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="consult-services shell" id="services" aria-labelledby="services-title">
+        <p class="section-kicker">02 / ENGAGEMENT OPTIONS</p>
+        <div class="consult-section-head"><h2 id="services-title">Two ways<br /><em>to get started.</em></h2><p>Start with a scoped problem and an appropriate commercial model. No promises of an unlimited fix before the system is understood.</p></div>
+        <div class="consult-offers">
+          <article>
+            <div class="offer-head"><span>01 / ONGOING</span><span class="offer-type">PART-TIME</span></div>
+            <h3>Fractional Backend & Integration Engineer</h3>
+            <p>Senior individual-contributor ownership for an existing product team that needs reliable progress without a full-time hire.</p>
+            <ul><li>Scoped API, integration, and backend work</li><li>Legacy .NET / SQL Server maintenance and modernization</li><li>Code review, verification, and concise weekly updates</li><li>Initial capacity of 10–15 hours per week</li></ul>
+            <a href="#contact">Discuss a part-time engagement <span aria-hidden="true">↗</span></a>
+          </article>
+          <article>
+            <div class="offer-head"><span>02 / PROJECT</span><span class="offer-type">TIME-BOXED</span></div>
+            <h3>Paid Systems & Production Assessment</h3>
+            <p>A bounded investigation when production symptoms are unclear and a fixed-price repair would be guesswork.</p>
+            <ul><li>Current-state and failure-boundary review</li><li>SQL/API/operational evidence gathering</li><li>Risk-ranked findings and remediation options</li><li>Optional separately scoped implementation</li></ul>
+            <a href="#contact">Discuss a diagnostic assessment <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="consult-evidence" aria-labelledby="evidence-title">
+        <div class="shell">
+          <p class="section-kicker">03 / SELECTED EXPERIENCE</p>
+          <div class="consult-section-head"><h2 id="evidence-title">Real production work.<br /><em>Not invented metrics.</em></h2><p>Examples are intentionally anonymized. I can discuss engineering decisions and trade-offs without exposing client data or internal system details.</p></div>
+          <div class="consult-cases">
+            {caseStudies.map((item, index) => (
+              <article>
+                <div class="case-top"><span>0{index + 1}</span><span>{item.category}</span></div>
+                <h3>{item.name}</h3>
+                <p><strong>Problem.</strong> {item.challenge}</p>
+                <p><strong>Contribution.</strong> {item.contribution}</p>
+                <p class="case-lesson">{item.lesson}</p>
+              </article>
+            ))}
+          </div>
+          <p class="consult-evidence-link">See the wider engineering background: <a href={base + 'portfolio/'}>Selected work and owned products <span aria-hidden="true">↗</span></a></p>
+        </div>
+      </section>
+
+      <section class="consult-fit shell" aria-labelledby="fit-title">
+        <div>
+          <p class="section-kicker">04 / WORKING MODEL</p>
+          <h2 id="fit-title">A senior partner.<br /><em>A realistic scope.</em></h2>
+        </div>
+        <div class="fit-copy">
+          <p>I work remotely from Taiwan, prefer APAC working hours, and can arrange meetings with advance notice. Limited European overlap is possible by agreement.</p>
+          <p>Engagements are scoped around actual delivery capacity, evidence, security and confidentiality requirements, payment terms, and the client's release process. Full-time availability and round-the-clock incident coverage are not included by default.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="consult-contact" aria-labelledby="contact-title">
+        <div class="shell contact-inner">
+          <div><p class="eyebrow">HAVE A BACKEND OR INTEGRATION PROBLEM?</p><h2 id="contact-title">Bring the problem.<br /><em>We'll define the scope.</em></h2></div>
+          <div class="contact-copy">
+            <p>An initial conversation is for understanding the problem, expected outcomes, constraints, and whether a small paid pilot is a fit. No obligation or promised fix.</p>
+            <a class="contact-button" href={schedulingUrl} target="_blank" rel="noopener noreferrer">Schedule a 30-minute introduction <span aria-hidden="true">↗</span></a>
+            <a class="contact-secondary" href="https://github.com/kcwang123" target="_blank" rel="noopener noreferrer">Review GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell"><span>KC Wang · Cymatic Logic · {new Date().getFullYear()}</span><span><a href={base}>Resume</a> · <a href={base + 'portfolio/'}>Portfolio</a></span></footer>
+  </body>
+</html>
