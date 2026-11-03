@@ -130,7 +130,9 @@
       "Protocol integration"
     ],
     "status": "In use",
-    "featured": false
+    "featured": false,
+    "sourceUrl": "https://github.com/kcwang123/HACS-daikin-dta116-pro",
+    "sourceLabel": "Daikin integration source"
   },
   {
     "slug": "line-llm",
