@@ -44,7 +44,7 @@ const groups = ['Professional', 'Client Delivery', 'Owned Product', 'Selected In
                 <p>{p.summary}</p>
                 <div class="tags">{p.tags.map((tag) => <span>{tag}</span>)}</div>
               </div>
-              {p.caseStudy ? <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study ↗</a> : <span></span>}
+              {p.caseStudy ? <a href={base + p.caseStudy.replace(/^\//, '') + '/'}>Read case study ↗</a> : p.sourceUrl ? <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">{p.sourceLabel || 'Public source code'} ↗</a> : <span></span>}
             </article>
           ))}
         </div>

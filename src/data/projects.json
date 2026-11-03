@@ -4,7 +4,7 @@
     "name": "PatchGrid",
     "category": "Owned Product",
     "subtitle": "Live-event file delivery and coordination",
-    "summary": "Born from a real live-production problem: teams exchanging console and show files through filenames, dates, and version suffixes with no clear authoritative copy. PatchGrid is now a production SaaS used by dozens of users.",
+    "summary": "Born from a real live-production problem: teams exchanging console and show files through filenames, dates, and version suffixes with no clear authoritative copy. PatchGrid is an independently built production-oriented coordination application.",
     "tags": [
       "Production SaaS",
       ".NET",
@@ -12,7 +12,7 @@
       "Live audio"
     ],
     "caseStudy": "/projects/patchgrid",
-    "status": "Production · Dozens of users",
+    "status": "Active owned product",
     "featured": true
   },
   {
@@ -36,7 +36,7 @@
     "name": "Messaging Platform",
     "category": "Professional",
     "subtitle": "High-volume multi-provider notification delivery",
-    "summary": "Production push and SMS delivery handling 1M+ push notifications and 50K+ SMS messages per day, with five SMS providers, retry behavior, delivery-state tracking, and operational troubleshooting.",
+    "summary": "Production push and SMS delivery across multiple external providers, including retry behavior, delivery-state tracking, and operational troubleshooting.",
     "tags": [
       "C#",
       "SMS",
@@ -130,7 +130,9 @@
       "Protocol integration"
     ],
     "status": "In use",
-    "featured": false
+    "featured": false,
+    "sourceUrl": "https://github.com/kcwang123/HACS-daikin-dta116-pro",
+    "sourceLabel": "Daikin integration source"
   },
   {
     "slug": "line-llm",

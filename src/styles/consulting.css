@@ -1,0 +1,108 @@
+.consulting-theme{background:var(--bg);color:var(--text);background-image:radial-gradient(circle at 90% 0,rgba(30,104,76,.08),transparent 30rem)}
+.consulting-header nav a[aria-current="page"]{color:var(--accent);font-weight:800}
+.consult-hero{padding:116px 0 132px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,.7fr);align-items:center;gap:72px}
+.consult-hero h1,.consult-section-head h2,.consult-fit h2,.consult-contact h2{font-size:clamp(3.6rem,7.5vw,7.4rem);letter-spacing:-.075em;line-height:.95;margin:28px 0 32px;font-weight:700}
+.consult-hero h1 em,.consult-section-head em,.consult-fit em,.consult-contact em{font-style:normal;font-weight:400;color:#7c8b81}
+.consult-lead{font-size:clamp(1.08rem,1.8vw,1.3rem);line-height:1.75;max-width:670px;color:#57665b}
+.consult-tags{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}
+.consult-tags span{border:1px solid var(--border);border-radius:100px;padding:7px 11px;color:var(--muted);font:500 .69rem/1 var(--mono);background:#fff9}
+.consult-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}
+.consult-actions a,.contact-button{min-height:50px;display:inline-flex;justify-content:center;align-items:center;gap:24px;padding:14px 20px;text-decoration:none;border-radius:100px;font-size:.85rem;font-weight:700;transition:background .2s,transform .2s}
+.consult-actions a:hover,.contact-button:hover{transform:translateY(-2px)}
+.consult-actions .primary,.contact-button{background:var(--ink);color:#fff}
+.consult-actions .primary:hover,.contact-button:hover{background:var(--accent)}
+.consult-actions .secondary{background:#fff8;border:1px solid var(--border);color:var(--text)}
+.consult-actions .secondary:hover{background:#fff}
+.consult-availability{display:flex;gap:9px;align-items:center;color:var(--muted);font:500 .68rem/1.6 var(--mono);margin:26px 0 0}
+.availability-dot{flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:#36a978;box-shadow:0 0 0 5px rgba(54,169,120,.12)}
+.consult-panel{border:1px solid #cdd8d0;background:#f9fbf7cc;border-radius:20px;box-shadow:0 32px 80px #16221b12;padding:31px}
+.panel-label{font:600 .64rem/1 var(--mono);letter-spacing:.1em;color:var(--accent);margin:0 0 26px}
+.consult-panel ol{list-style:none;padding:0;margin:0}
+.consult-panel li{position:relative;padding:25px 0 25px 23px;border-top:1px solid var(--border)}
+.consult-panel li::before{content:"";position:absolute;left:0;top:30px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.consult-panel li small{display:block;color:var(--accent);font:600 .63rem var(--mono);margin-bottom:7px}
+.consult-panel li strong{display:block;font-size:1.06rem;letter-spacing:-.03em}
+.consult-panel li p{color:var(--muted);font-size:.82rem;line-height:1.7;margin:8px 0 0}
+.consult-problems,.consult-evidence{padding:110px 0;background:#edf1e9;border-block:1px solid var(--border)}
+.consult-section-head{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:60px;margin:30px 0 62px}
+.consult-section-head h2,.consult-fit h2{font-size:clamp(2.7rem,5.6vw,5.5rem);margin:0}
+.consult-section-head>p{color:var(--muted);max-width:440px;line-height:1.8;margin:0}
+.consult-problem-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border)}
+.consult-problem-grid article{border-right:1px solid var(--border);padding:30px 30px 4px}
+.consult-problem-grid article:first-child{padding-left:0}
+.consult-problem-grid article:last-child{border-right:none}
+.consult-index{font:600 .72rem var(--mono);color:var(--accent)}
+.consult-problem-grid h3{font-size:1.5rem;line-height:1.15;letter-spacing:-.04em;margin:35px 0 18px}
+.consult-problem-grid p{color:var(--muted);line-height:1.75;font-size:.88rem}
+.consult-services{padding:126px 0}
+.consult-offers{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.consult-offers article{display:flex;flex-direction:column;padding:36px;min-height:470px;border:1px solid var(--border);border-radius:16px;background:#fff7}
+.offer-head{display:flex;justify-content:space-between;color:var(--accent);font:600 .64rem/1 var(--mono);letter-spacing:.06em}
+.offer-type{border-radius:100px;background:var(--accent-soft);padding:6px 9px}
+.consult-offers h3{font-size:clamp(1.65rem,2.5vw,2.4rem);letter-spacing:-.05em;line-height:1.12;margin:48px 0 18px;max-width:440px}
+.consult-offers p{color:var(--muted);line-height:1.75;margin:0 0 18px}
+.consult-offers ul{padding-left:19px;line-height:1.8;color:#45554b;font-size:.85rem;margin:0 0 32px}
+.consult-offers li{padding-left:5px;margin:7px 0}
+.consult-offers article>a{margin-top:auto;border-top:1px solid var(--border);padding-top:19px;text-decoration:none;font-weight:700;font-size:.84rem;color:var(--accent)}
+.consult-offers article>a:hover{text-decoration:underline}
+.consult-cases{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.consult-cases article{background:#fbfcf8;border:1px solid var(--border);padding:30px;border-radius:16px}
+.case-top{display:flex;justify-content:space-between;gap:20px;color:var(--accent);font:600 .64rem var(--mono);letter-spacing:.04em}
+.consult-cases h3{font-size:clamp(1.5rem,2.5vw,2.4rem);letter-spacing:-.05em;line-height:1.15;max-width:400px;margin:36px 0 27px}
+.consult-cases p{color:var(--muted);font-size:.87rem;line-height:1.8}
+.consult-cases p strong{color:var(--text)}
+.consult-cases .case-lesson{padding-top:22px;margin-top:26px;border-top:1px solid var(--border);font-weight:650;color:#2a5b44}
+.consult-evidence-link{font-size:.82rem;margin:30px 0 0;color:var(--muted)}
+.consult-evidence-link a{color:var(--accent);font-weight:700;text-decoration:none}
+.consult-evidence-link a:hover{text-decoration:underline}
+.consult-fit{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;padding:125px 0}
+.consult-fit .section-kicker{margin-bottom:30px}
+.fit-copy{color:var(--muted);font-size:1rem;line-height:1.85}
+.consult-contact{background:var(--ink);color:#eff6f1;padding:118px 0}
+.contact-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end}
+.consult-contact .eyebrow{color:#8ddbb7}
+.consult-contact h2{font-size:clamp(3.2rem,6.3vw,6.4rem);margin:28px 0 0}
+.consult-contact h2 em{color:#81aa95}
+.contact-copy p{color:#bbccc1;line-height:1.8;max-width:460px;margin:0 0 26px}
+.consult-contact .contact-button{background:#d8f2e2;color:var(--ink)}
+.consult-contact .contact-button:hover{background:#fff}
+.contact-secondary{color:#bfe2cd;display:block;margin-top:22px;text-decoration:none;font-size:.85rem}
+.contact-secondary:hover{text-decoration:underline}
+.consulting-theme footer a{text-decoration:none}
+.consult-owned{padding:120px 0;border-bottom:1px solid var(--border)}
+.consult-owned-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.consult-owned-grid article{display:flex;flex-direction:column;min-width:0;border:1px solid var(--border);border-radius:16px;padding:28px;background:#fff9}
+.owned-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--accent);font:600 .61rem/1.4 var(--mono);letter-spacing:.03em}
+.consult-owned-grid h3{font-size:clamp(1.4rem,2.1vw,2.25rem);letter-spacing:-.05em;line-height:1.2;margin:40px 0 16px}
+.owned-summary{color:var(--text);line-height:1.75;font-size:.91rem;margin:0 0 20px}
+.owned-proof{font:500 .69rem/1.6 var(--mono);color:var(--accent);margin:0 0 15px}
+.owned-caveat{color:var(--muted);line-height:1.7;font-size:.79rem;margin:0 0 30px}
+.consult-owned-grid article>a{margin-top:auto;border-top:1px solid var(--border);padding-top:18px;color:var(--accent);font-weight:700;font-size:.81rem;text-decoration:none}
+.consult-owned-grid article>a:hover{text-decoration:underline}
+@media(max-width:960px){
+  .consult-owned-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .consult-hero{gap:35px;grid-template-columns:1fr}
+  .consult-panel{max-width:650px}
+  .consult-section-head{gap:25px}
+}
+@media(max-width:720px){
+  .consult-owned{padding-block:78px}
+  .consult-owned-grid{grid-template-columns:1fr}
+  .consulting-header nav{gap:13px}
+  .consulting-header nav a:nth-child(2){display:none}
+  .consult-hero{padding:75px 0 85px}
+  .consult-hero h1{font-size:clamp(3.4rem,12vw,5.8rem)}
+  .consult-problems,.consult-evidence,.consult-services{padding-block:76px}
+  .consult-section-head,.consult-fit,.contact-inner{grid-template-columns:1fr;gap:22px}
+  .consult-section-head{margin-bottom:36px}
+  .consult-problem-grid,.consult-offers,.consult-cases{grid-template-columns:1fr}
+  .consult-problem-grid article{border-right:0;border-bottom:1px solid var(--border);padding:26px 0}
+  .consult-problem-grid article:last-child{border-bottom:0}
+  .consult-problem-grid h3{margin:18px 0 10px}
+  .consult-offers article{padding:26px;min-height:auto}
+  .consult-offers h3{margin-top:32px}
+  .consult-fit{padding:80px 0}
+  .consult-contact{padding:80px 0}
+  .consult-contact h2{font-size:clamp(3rem,11vw,5rem)}
+}
+@media(prefers-reduced-motion:reduce){.consult-actions a,.contact-button{transition:none}}

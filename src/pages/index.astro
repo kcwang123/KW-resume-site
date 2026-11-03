@@ -30,11 +30,12 @@ const featuredProjects = projects.filter((project) => project.featured);
 </head>
 <body class="visual-theme">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="topbar shell">
+  <header class="topbar home-topbar shell">
     <a class="brand" href={base} aria-label="KC Wang home"><span>KC</span><small>WANG</small></a>
     <nav aria-label="Primary navigation">
       <a href="#experience">Experience</a>
       <a href={base + 'portfolio/'}>Selected work</a>
+      <a href={base + 'consulting/'}>Consulting</a>
       <a href={base + 'console/'}>Console</a>
       <a class="nav-link-strong" href={resume.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
@@ -50,7 +51,7 @@ const featuredProjects = projects.filter((project) => project.featured);
         <div class="availability"><span aria-hidden="true"></span>{resume.profile.location} · UTC+8 · Remote</div>
         <div class="actions">
           <a class="primary" href={base + 'portfolio/'}>Explore selected work <span>↗</span></a>
-          <a href="#experience">13+ years of experience</a>
+          <a href={base + 'consulting/'}>Consulting & contract work <span>↗</span></a>
         </div>
       </div>
 
@@ -155,7 +156,7 @@ const featuredProjects = projects.filter((project) => project.featured);
       </div>
       <div class="closing-copy">
         <p>I work best where software crosses boundaries: long-lived applications, databases, external providers, computation modules, devices, and the people operating them.</p>
-        <div class="actions"><a class="primary" href={base + 'portfolio/'}>See the evidence <span>↗</span></a><a href={base + 'console/'}>Developer console</a></div>
+        <div class="actions"><a class="primary" href={base + 'portfolio/'}>See the evidence <span>↗</span></a><a href={base + 'consulting/'}>Consulting services</a><a href={base + 'console/'}>Developer console</a></div>
       </div>
     </section>
   </main>

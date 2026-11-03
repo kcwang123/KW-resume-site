@@ -17,9 +17,9 @@
   },
   "metrics": [
     {"value": "13+", "label": "Years building production systems"},
-    {"value": "1M+", "label": "Push notifications / day"},
-    {"value": "50K+", "label": "SMS deliveries / day"},
-    {"value": "5", "label": "SMS provider integrations"}
+    {"value": "API", "label": "Provider and messaging integration"},
+    {"value": "SQL", "label": "Production data workflows"},
+    {"value": "Ops", "label": "Production systems ownership"}
   ],
   "focus": [
     "Backend & production systems",
@@ -37,7 +37,7 @@
       "location": "Remote",
       "summary": "Own and evolve existing production systems spanning customer operations, messaging, integrations, data, deployment, and reliability.",
       "highlights": [
-        "Operate a notification platform delivering 1M+ push notifications and 50K+ SMS messages per day across five SMS providers.",
+        "Operate a high-volume messaging integration platform connecting push, SMS, and external providers.",
         "Own a customer-operations platform deployed to Azure Web App; changed a blocking 12-tab user view into independently loaded and refreshable tabs.",
         "Use application-side revalidation plus downstream state checks for operations that mutate external system state.",
         "Maintain C#/.NET and SQL Server services across Azure and IIS, with production monitoring through Application Insights."
@@ -49,7 +49,7 @@
       "company": "Education Budget & Accounting Platform",
       "role": "Software Engineer",
       "location": "Taiwan",
-      "summary": "Maintained and evolved a long-lived budgeting and accounting platform serving 3,300+ schools and roughly 15,000 users.",
+      "summary": "Maintained and evolved a long-lived education budgeting and accounting platform used across a broad network of institutions.",
       "highlights": [
         "Evolved .NET Framework / SQL Server production workflows while preserving compatibility with older fiscal-year data.",
         "Introduced new fields incrementally rather than forcing incompatible schema assumptions onto historical records.",
